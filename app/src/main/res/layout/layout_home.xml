@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vf.admin.vf_rep.MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/homelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/homescreenIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                android:weightSum="1">
+
+
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/hi"
+                        android:id="@+id/imageView2"
+                        android:layout_weight="1"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/homescreenIntroText"
+                    style="@style/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Wayo! \n What would you like to do today?"
+
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/homescreen1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                android:weightSum="1">
+
+
+                <TextView
+                    android:id="@+id/homescreen1Text"
+                    style="@style/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Great! \n View list of all stores uploaded by you."
+                    />
+
+                <Button
+
+                    android:id="@+id/Scanbarcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="GoToScanbarcode"
+                    android:text="View Stores"
+                    android:background="@drawable/button_state"
+                    style="@style/button_style" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homescreen2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/homescreen2Text"
+                    style="@style/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PlaceHolder2 \n ( Aditional information here more info )"
+                    />
+
+                <Button
+                    android:id="@+id/placeholder2"
+                    style="@style/button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_state"
+                    android:onClick="placeholder2"
+                    android:text="Set Event Now" />
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homescreen3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/homescreen3Text"
+                    style="@style/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Placeholder 3 \n ( Aditional information here more info )"
+                    />
+
+
+                <Button
+
+                    android:id="@+id/placeholder3"
+                    style="@style/button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_state"
+                    android:onClick="placeholder3"
+                    android:text="Placeholder3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homescreen4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/homescreen4Text"
+
+                    style="@style/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Placeholder 4 \n ( Aditional information here more info )"
+
+                    />
+
+
+                <Button
+
+                    android:id="@+id/Placeholder4"
+                    style="@style/button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_state"
+                    android:gravity="center"
+                    android:onClick="placeholder4"
+                    android:text="Placeholder4" />
+            </LinearLayout>
+
+
+        </ViewFlipper>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/home1"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_state"
+            android:onClick="ClickHome1"
+            android:text="View Stores"
+            android:layout_gravity="bottom"
+
+            />
+
+        <Button
+            android:id="@+id/home2"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/button_state"
+            android:onClick="ClickHome2"
+            android:text="Placeholder1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/home3"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_state"
+            android:onClick="ClickHome3"
+            android:text="Placeholder2"
+
+            />
+
+        <Button
+            android:id="@+id/home4"
+            android:background="@drawable/button_state"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ClickHome4"
+            android:text="Placeholder3" />
+
+    </LinearLayout>
+
+</LinearLayout>
