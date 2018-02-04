@@ -76,4 +76,12 @@ public class MainActivity extends AppCompatActivity {
 
        startActivity(intent);
     }
+
+    public void GoToContracts(View view) {
+
+
+        Intent intent = new Intent(MainActivity.this, StoreListContractsActivity.class);
+
+        startActivity(intent);
+    }
 }

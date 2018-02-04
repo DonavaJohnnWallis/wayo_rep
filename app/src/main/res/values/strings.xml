@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">VF_rep</string>
+    <string name="title_activity_contract_one">ContractOneActivity</string>
+    <string name="large_text">
+        "GENERAL TERMS AND CONDITIONS FOR OUTLET BRANDING AND INSTALLATION OF VISIBILITY MATERIALS\n\n"
+
+        "We Kenya Breweries Limited and UDV (Kenya) Limited, both subsidiaries of East African Breweries Limited and hereinafter jointly referred to as ‘the Company’ or ‘WE’ wish to select your outlet for branding support and placement of our branded furniture and fixtures in your establishment known as <b>{information from previous screen}</b> along <b>{information from previous screen}</b> Road, Nairobi and of P.O Box <b>{information from previous screen}</b>. (‘the Outlet’) for a period of three (3) years on the following terms and conditions."
+
+
+
+    </string>
+    <string name="action_settings">Settings</string>
 </resources>

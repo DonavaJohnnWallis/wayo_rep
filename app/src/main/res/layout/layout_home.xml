@@ -115,7 +115,7 @@
                     style="@style/info_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="PlaceHolder2 \n ( Aditional information here more info )"
+                    android:text="Contracts and appendix \n Sign of on contracts and  unit appendix"
                     />
 
                 <Button
@@ -124,8 +124,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_state"
-                    android:onClick="placeholder2"
-                    android:text="Set Event Now" />
+
+                    android:text="Placeholder" />
 
 
 
@@ -149,10 +149,16 @@
                     style="@style/info_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Placeholder 3 \n ( Aditional information here more info )"
+                    android:text="Contracts and appendix \n Choose a option below to sign of on contracts or unit appendix"
                     />
 
-
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
                 <Button
 
                     android:id="@+id/placeholder3"
@@ -160,8 +166,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_state"
-                    android:onClick="placeholder3"
-                    android:text="Placeholder3" />
+                    android:onClick="GoToContracts"
+                    android:text="Contracts"
+                    android:layout_weight="1"/>
+                <Button
+
+                    android:id="@+id/placeholder3"
+                    style="@style/button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_state"
+                    android:onClick="placeholder3a"
+                    android:text="Appendix"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
 
             </LinearLayout>
 
@@ -192,7 +212,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_state"
                     android:gravity="center"
-                    android:onClick="placeholder4"
+
                     android:text="Placeholder4" />
             </LinearLayout>
 
@@ -249,7 +269,7 @@
             android:layout_weight="1"
             android:background="@drawable/button_state"
             android:onClick="ClickHome3"
-            android:text="Placeholder2"
+            android:text="Contracts"
 
             />
 
