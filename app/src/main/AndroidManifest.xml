@@ -32,7 +32,9 @@
             android:label="Contract Page 1"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".StoreDetailsActivity" />
-        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".ApendixActivity"></activity>
+        <activity android:name=".ApenixListActivity"></activity>
+        <activity android:name=".SignatureActivity"></activity>
     </application>
 
 </manifest>

@@ -49,7 +49,7 @@ public class ContractOneActivity extends AppCompatActivity {
 
     public void next(View view) {
 
-        Intent intent = new Intent(ContractOneActivity.this, MainActivity.class);
+        Intent intent = new Intent(ContractOneActivity.this, SignatureActivity.class);
 
         startActivity(intent);
     }
