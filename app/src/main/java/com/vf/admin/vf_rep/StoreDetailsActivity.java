@@ -26,5 +26,6 @@ public class StoreDetailsActivity extends AppCompatActivity {
         intent.putExtra("pobox",pobox.getText().toString());
 
         startActivity(intent);
+        finish();
     }
 }

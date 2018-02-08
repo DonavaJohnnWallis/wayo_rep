@@ -43,8 +43,9 @@ public class ContractFourActivity extends AppCompatActivity {
 
     public void next(View view) {
 
-        Intent intent = new Intent(ContractFourActivity.this, SignatureActivity.class);
+        Intent intent = new Intent(ContractFourActivity.this, ContractLast.class);
 
         startActivity(intent);
+        finish();
     }
 }

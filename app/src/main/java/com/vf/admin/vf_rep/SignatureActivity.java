@@ -75,20 +75,20 @@ public class SignatureActivity extends Activity {
                 Bitmap signatureBitmap = mSignaturePad.getSignatureBitmap();
                 if (addJpgSignatureToGallery(signatureBitmap)) {
                     Toast.makeText(SignatureActivity.this, "Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
-                    Intent i = new  Intent(getApplicationContext(),MainActivity.class);
+                    Intent i = new  Intent(getApplicationContext(),SuccessActivity.class);
                     startActivity(i);
                 } else {
                     Toast.makeText(SignatureActivity.this, "Unable to store the signature", Toast.LENGTH_SHORT).show();
-                    Intent i = new  Intent(getApplicationContext(),MainActivity.class);
+                    Intent i = new  Intent(getApplicationContext(),SuccessActivity.class);
                     startActivity(i);
                 }
                 if (addSvgSignatureToGallery(mSignaturePad.getSignatureSvg())) {
                     Toast.makeText(SignatureActivity.this, "SVG Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
-                    Intent i = new  Intent(getApplicationContext(),MainActivity.class);
+                    Intent i = new  Intent(getApplicationContext(),SuccessActivity.class);
                     startActivity(i);
                 } else {
                     Toast.makeText(SignatureActivity.this, "Unable to store the SVG signature", Toast.LENGTH_SHORT).show();
-                    Intent i = new  Intent(getApplicationContext(),MainActivity.class);
+                    Intent i = new  Intent(getApplicationContext(),SuccessActivity.class);
                     startActivity(i);
                 }
             }
@@ -190,8 +190,9 @@ public class SignatureActivity extends Activity {
 
     public void ConfirmSignature(View view) {
 
-        Intent i = new  Intent(getApplicationContext(),MainActivity.class);
+        Intent i = new  Intent(getApplicationContext(),SuccessActivity.class);
         startActivity(i);
+        finish();
 
 
     }

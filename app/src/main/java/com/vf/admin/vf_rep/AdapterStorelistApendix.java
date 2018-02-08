@@ -51,9 +51,9 @@ public class AdapterStorelistApendix extends ArrayAdapter {
 
 
 
-            textViewTitle.setText("@50 Bar");
-            imageViewIte.setText("KIS-T-KT2-1714");
-            url.setText("View Appenix");
+            textViewTitle.setText("Store Name");
+            imageViewIte.setText("Store URN: 00 000 000");
+            url.setText("View Appendix");
 
 
 

@@ -132,7 +132,7 @@
                     style="@style/info_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Contracts and appendix \n Choose a option below to sign of on contracts or unit appendix" />
+                    android:text="Contracts and appendix \n Choose an option below to sign of on contracts or unit appendix" />
 
                 <LinearLayout
                     android:id="@+id/container"

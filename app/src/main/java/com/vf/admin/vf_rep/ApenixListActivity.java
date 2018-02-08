@@ -51,6 +51,7 @@ public class ApenixListActivity extends AppCompatActivity {
                                     long arg3) {
                 Intent i = new  Intent(getApplicationContext(),ApendixActivity.class);
                 startActivity(i);
+                finish();
 
 
             }

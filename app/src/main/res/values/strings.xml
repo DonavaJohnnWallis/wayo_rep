@@ -132,10 +132,10 @@
     </string>
 
 
-
     <string name="action_settings">Settings</string>
     <string name="agreement">I agree the terms and conditions.</string>
     <string name="clear_pad">Clear Pad</string>
     <string name="save_signature">Agree</string>
+    <string name="agreement2">This Agreement has been discussed and the above terms and conditions agreed by both parties on this </string>
 
 </resources>

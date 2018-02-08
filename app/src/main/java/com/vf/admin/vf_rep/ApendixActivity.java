@@ -45,24 +45,7 @@ public class ApendixActivity extends AppCompatActivity {
         // Set the Adapter to GridView
         gridView.setAdapter(gridViewCustomeAdapter);
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-
-
-            //you should be able to set the url differetnly for each position, read up about it
-            //on  stackoverflow
-            @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-                                    long arg3) {
-                Intent i = new  Intent(getApplicationContext(),ApenixListActivity.class);
-                startActivity(i);
-
-
-
-
-            }
-
-        });
 
 
     }
@@ -76,6 +59,7 @@ public class ApendixActivity extends AppCompatActivity {
         Intent intent = new Intent(ApendixActivity.this, SignatureActivity.class);
 
         startActivity(intent);
+        finish();
 
     }
 

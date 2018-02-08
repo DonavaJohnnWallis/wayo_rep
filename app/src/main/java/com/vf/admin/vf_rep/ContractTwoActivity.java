@@ -46,5 +46,6 @@ public class ContractTwoActivity extends AppCompatActivity {
         Intent intent = new Intent(ContractTwoActivity.this, ContractThreeActivity.class);
 
         startActivity(intent);
+        finish();
     }
 }

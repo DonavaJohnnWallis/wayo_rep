@@ -5,18 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Login extends AppCompatActivity {
+public class SuccessActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_login);
+        setContentView(R.layout.success_layout);
     }
 
+    public void GoHome(View view) {
 
-
-    public void Login(View view) {
-        Intent intent = new Intent(Login.this, MainActivity.class );
+        Intent intent = new Intent(SuccessActivity.this, MainActivity.class);
 
         startActivity(intent);
         finish();

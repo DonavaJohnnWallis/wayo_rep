@@ -72,5 +72,7 @@ public class ContractOneActivity extends AppCompatActivity {
 
 
         startActivity(intent);
+        finish();
+
     }
 }

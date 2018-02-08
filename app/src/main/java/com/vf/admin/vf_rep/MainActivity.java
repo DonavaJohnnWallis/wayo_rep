@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, StoreListContractsActivity.class);
 
         startActivity(intent);
+        finish();
     }
 
     public void GoToApendix(View view) {
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ApenixListActivity.class);
 
         startActivity(intent);
+        finish();
     }
 
 
