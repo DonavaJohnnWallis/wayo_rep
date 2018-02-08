@@ -18,30 +18,28 @@
         />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/storename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Store Name"
+        android:hint="Store Name"
         android:layout_marginBottom="30dp"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Address"
+        android:hint="Address"
         android:layout_marginBottom="30dp"/>
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/pobox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="PO Box"
+        android:hint="PO Box"
         android:layout_marginBottom="30dp"/>
 
     <Button

@@ -35,6 +35,10 @@
         <activity android:name=".ApendixActivity"></activity>
         <activity android:name=".ApenixListActivity"></activity>
         <activity android:name=".SignatureActivity"></activity>
+        <activity android:name=".ContractTwoActivity"></activity>
+        <activity android:name=".ContractThreeActivity"></activity>
+        <activity android:name=".ContractFourActivity"></activity>
+
     </application>
 
 </manifest>

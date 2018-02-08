@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,86 +20,16 @@
                 style="@style/contact_heading"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contract Page 1 - 5" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:srcCompat="@drawable/kenya_logo"
-                android:layout_margin="5dp"
-                android:layout_gravity="center_horizontal"/>
+                android:text="Contract Page 4 - 5" />
 
             <TextView
                 android:id="@+id/textView4"
                 style="@style/contract"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/contract1a"
+                android:text="@string/page4"
                 tools:layout_editor_absoluteX="117dp"
                 tools:layout_editor_absoluteY="72dp" />
-
-            <TextView
-                android:id="@+id/storenametext"
-                style="@style/contract"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="72dp"
-                android:hint="No Store set"
-               />
-
-
-            <TextView
-                android:id="@+id/textView4a"
-                style="@style/contract"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/contract1b"
-                tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="72dp" />
-
-            <TextView
-                android:id="@+id/roadtext"
-                style="@style/contract"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="72dp"
-                android:hint="No Road Set"/>
-
-            <TextView
-                android:id="@+id/textView4ab"
-                style="@style/contract"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/contract1ba"
-                tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="72dp" />
-
-            <TextView
-                android:id="@+id/poboxtext"
-                style="@style/contract"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="72dp"
-                android:hint="No PO Box Set"/>
-
-
-            <TextView
-                android:id="@+id/textView4c"
-                style="@style/contract"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/contract1c"
-                tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="72dp" />
-
-
-
 
             <TextView
                 android:id="@+id/textView6"

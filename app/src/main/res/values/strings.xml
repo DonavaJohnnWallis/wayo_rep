@@ -1,14 +1,138 @@
 <resources>
     <string name="app_name">VF_rep</string>
     <string name="title_activity_contract_one">ContractOneActivity</string>
-    <string name="large_text">
+    <string name="contract1a">
         "GENERAL TERMS AND CONDITIONS FOR OUTLET BRANDING AND INSTALLATION OF VISIBILITY MATERIALS\n\n"
+        "We Kenya Breweries Limited and UDV (Kenya) Limited, both subsidiaries of East African Breweries Limited and hereinafter jointly referred to as ‘the Company’ or ‘WE’ wish to select your outlet for branding support and placement of our branded furniture and fixtures in your establishment known as  "
+    </string>
+    <string name="contract1b">
+        along
+    </string>
+    <string name="contract1ba">
+       Road, Nairobi and of P.O Box"
+    </string>
+    <string name="contract1c">
+       (‘the Outlet’) for a period of three (3) years on the following terms and conditions.
+    </string>
+    <string name="page2">
+        1.	The Company shall supply all the branding and visibility materials which shall be affixed and installed on designated areas in the interior and exterior of the Outlet as shall be agreed between the Company and the Outlet. The branding shall take the form of:
+         \n\n
+         a)	Outside wall branding
+         \n
+         b)	Inside wall art
+         \n
+         c)	a)	Back bar branding
+         \n
+         d)	Counter top and table tops raisins
+         \n
+         e)	installation of branded Instore furniture/fixtures
+         \n
+         f)	interior and external signage and name boards
+        \n
+         g)	light boxes
+         \n
+        h)	price boards
+        \n\n
+        2. All expenses incurred with regard to design, construction and installation of the branding materials shall be met by the Company and the Outlet will not be required to pay money or any other consideration to facilitate installation of branding and visibility materials.
+        \n\n
+        3. The Company undertakes to carry out branding of the Outlet in accordance with the provisions of the Alcoholic Drinks Control Act, 2010 (ADCA) , the Diageo Marketing Code, as well as all applicable legislation and by-laws.
+       \n\n
+        4. The Company shall obtain the relevant licences and permits required for branding activities in the designated areas of the Outlet from the respective authorities.
+        \n\n
+        5. The Company warrants that the branding and visibility materials proposed for use in the Outlet do not infringe any third party’s intellectual property. The Outlet acknowledges that the Company owns and will retain all rights, title and interest in and to the branding and visibility materials however title in the furniture and fixtures on which the branding is placed shall remain the property of the Outlet.
+        \n\n
+        6. The Outlet shall cooperate with the Company and/or its agents and contractors and allow them access to the premises on reasonable notice, to affix the branding materials in the designated areas and/or inspect any branding materials in the Outlet. The Company and/or its agents and contractors undertake to adhere to the 1.	Outlet’s rules or policies while on the premises.
+        \n\n
+        7. Both parties shall inspect the premises before branding and record the physical state of the premises before proceeding with installation of branding and visibility materials in the Outlet.
+         \n\n
+        8. The Outlet shall keep an inventory of all the moveable branding and visibility items installed at the premises during the term of this Agreement.
+       \n\n
+        9. 1.	The Outlet undertakes that its duly authorized representatives will be present at the delivery and installation of the branding and visibility materials at the premises and will sign supporting documents confirming the installation of the branding. Any defects detected at the point of installation or branding should be immediately reported to the Company’s representatives.
+        \n\n
+        10. The Outlet undertakes that its duly authorized representatives will be present at the delivery and installation of the branding and visibility materials at the premises and will sign supporting documents confirming the installation of the branding. Any defects detected at the point of installation or branding should be immediately reported to the Company’s representatives.
 
-        "We Kenya Breweries Limited and UDV (Kenya) Limited, both subsidiaries of East African Breweries Limited and hereinafter jointly referred to as ‘the Company’ or ‘WE’ wish to select your outlet for branding support and placement of our branded furniture and fixtures in your establishment known as <b>{information from previous screen}</b> along <b>{information from previous screen}</b> Road, Nairobi and of P.O Box <b>{information from previous screen}</b>. (‘the Outlet’) for a period of three (3) years on the following terms and conditions."
+
+    </string>
+    <string name="page3">
+
+        11.	The Outlet shall not reproduce, deface, destroy or tamper with the Company’s branding and visibility materials during the continuance of this Agreement and undertakes to maintain all branding and visibility in the Outlet for the term of this Agreement.
+        \n\n
+        12.	The Outlet shall not move or attempt to move any visibility or branding materials to any other section of the Outlet which had not been earlier agreed upon with the Company, or relocate the materials from the current premises of the Outlet without prior written consent for such relocation from the Company.
+        \n\n
+        13.	The Outlet agrees that the Company will get first right of refusal for any POS placement and front line merchandise including and not limited to branded fridges, tents/canopy, parasols, light boxes, tent cards, menus, uniforms, price boards, outlet name signage, barrels and any other branding or visibility materials as shall be agreed between the parties.
+        \n\n
+        14.	 The Outlet shall keep the branding and visibility materials clean, tidy and in good condition and shall ensure proper handling of the materials by its employees and/or agents at all times so as to minimize wear and tear.
+        \n\n
+        15.	The Outlet will immediately contact the Company’s representatives in case any of the Company’s branding and visibility materials are damaged, destroyed or in need of replacement.
+        \n\n
+        16.	The Company will from time to time maintain the branding and visibility materials in working order and where required, shall replace broken or damaged branding and visibility materials with articles of a similar kind and value subject to proof that the damage has not been caused by the negligence, misuse, mishandling or otherwise caused by the Outlet’s officers, employees, agents or contractors. The Outlet acknowledges that the Company will not be responsible for any loss of or damage to the branding and visibility items arising out of or in connection with the said negligence.
+        \n\n
+        17.	The Outlet undertakes to ensure that it lists and displays all existing and newly presented Company products as directed and guided by the Company from time to time through an approved planogram.
+        \n\n
+        18.	The Outlet undertakes to purchase the Company’s brands strictly from the Company’s appointed distributors during the term of this Agreement.
+        \n\n
+        19.	The Outlet shall provide to the Company on a monthly basis, sales data relating to sales of the Company’s products based on SKU as well as total category in the Outlet.
+        \n\n
+        21.	The Outlet will immediately inform the Company in writing of any intended Outlet closure, revamps and changes of control or management in advance. 
+        \n\n
+        21.	The Company considers it to be of the utmost importance that all reasonable steps are taken to prevent the smuggling of its brands. Accordingly, the Outlet hereby warrants to the Company that it shall not smuggle the Company’s brands or sell them in circumstances where it knows or suspects that they will, or are likely to, be smuggled. In the event that the Outlet becomes aware or suspects products being smuggled, it undertakes to inform the Company and provide it with all relevant information relating to smuggled products.
+        \n\n
+        22.	The Outlet undertakes that it shall not sell the Company’s products to persons under the age of 18 years.
+        \n\n
+        23.	The Company shall not be responsible for any property damage that may occur due to delivery, installation, removal or placement of the branding and visibility items in the Outlet.
+        \n\n
+        24.	Any damage or loss of the branding and visibility installed at the Outlet will result in a replacement cost being charged to the Outlet’s account. The replacement cost, which will be communicated to the Outlet in writing on the occurrence of negligence, misuse or mishandling by the Outlet’s officers, employees, agents and contractors will be payable by the Outlet within seven (7) days of the occurrence of such events.
+
+
+    </string>
+    <string name="page4">
+        <b>25. Termination</b>
+        \n\n
+        25.1	Either party may by notice in writing terminate this Agreement in its sole discretion at any time, without cause, upon thirty (30) days’ written notice to the other party.
+        \n\n
+        25.2	The Company may terminate this Agreement immediately by notice in writing to the Outlet:
+        \n\n
+        a)	if any of the brands represented in the branding and visibility materials cease to be produced or distributed by the Company in Kenya;
+       \n\n
+        b)	if it comes to the attention of the Company that the Outlet does not hold the required licences and permits to operate the Outlet;
+        \n\n
+        c)	if the Outlet fails to use or maintain the branding and visibility materials in the manner stipulated in this Agreement;
+       \n\n
+        d)	if the Outlet commits any gross misconduct affecting the business of the Company or any act which is prejudicial to the business of the Company; and
+        \n\n
+        e)	if the Outlet undergoes a Change of Control.
+        \n\n
+       25.3	Either party may terminate this Agreement immediately if the other:
+        \n\n
+        a)	commits a material breach of this Agreement which, if capable of being cured, is not cured within ten (10) days of receipt of written notice of such breach;
+        \n\n
+        b)	becomes insolvent or goes into liquidation and is unable to pay its debts; or
+        \n\n
+        c)	if an event of force majeure continues for a period in excess of thirty (30) days in any period.
+        \n\n
+     <b>25. 1.1	Consequences of Termination</b>
+        \n\n
+        a)	On termination of these terms and conditions, the Company will be at liberty to collect the branding and visibility materials from the Outlet by giving three (3) days’ notice in writing to the Outlet. The Company undertakes to restore the premises to its original state prior to the branding.
+        \n\n
+        b)	The Outlet will grant the Company access its premises to remove all branding and visibility materials.
+        \n\n
+        c)	For the avoidance of doubt, termination of this Agreement howsoever caused shall not interfere with the normal supply of the Company’s products to the Outlet from the date of termination.
+        \n\n
+        26.	The Outlet shall communicate all the operational details of this Agreement to the relevant internal management team and the Outlet employees and/or agents to ensure a timely and efficient implementation process.
+        \n\n
+        27.	The Outlet agrees to ensure the performance of its obligations in accordance with the terms of this Agreement shall always comply with the relevant Kenyan laws and the Diageo Code of Business Conduct and the Diageo Marketing Code, copies of which has been supplied to you and is further viewable on www.diageo.com, receipt and understanding of which you hereby acknowledge. The Outlet will ensure that its management, employees, agents, sub-contractors and other third parties it engages in the performance of its obligations set out in this Agreement comply with the Company’s Codes.
+        \n\n
+        28.	No variation of this agreement shall be effective unless it is in writing and signed by the parties.
+        \n\n
+        29.This Agreement and any dispute or claim arising out of or in connection with it is governed by Kenyan Law.
+
 
 
 
     </string>
+
+
+
     <string name="action_settings">Settings</string>
     <string name="agreement">I agree the terms and conditions.</string>
     <string name="clear_pad">Clear Pad</string>
