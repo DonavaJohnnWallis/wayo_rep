@@ -51,7 +51,7 @@ public class StoreListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://winninginontrade.com")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://testingwayo.winninginontrade.miid.co.za")));
                 finish();
 
             }

@@ -70,6 +70,13 @@ public class ContractOneActivity extends AppCompatActivity {
 
         Intent intent = new Intent(ContractOneActivity.this, ContractTwoActivity.class);
 
+        TextView storetext = (TextView) findViewById(R.id.storenametext);
+        TextView addresstext = (TextView) findViewById(R.id.roadtext);
+        TextView potext = (TextView) findViewById(R.id.poboxtext);
+
+        intent.putExtra("storename",storetext.getText().toString());
+        intent.putExtra("address",addresstext.getText().toString());
+        intent.putExtra("pobox",potext.getText().toString());
 
         startActivity(intent);
         finish();

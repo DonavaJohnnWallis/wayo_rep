@@ -167,7 +167,7 @@ public class Login extends AppCompatActivity {
 
     public void Login(View view) {
 
-<<<<<<< HEAD
+
         Intent intent1 = new Intent(Login.this, MainActivity.class);//Remove after debugging
         startActivity(intent1); finish();//Remove after debugging
 
@@ -226,10 +226,7 @@ public class Login extends AppCompatActivity {
         }
 
 
-=======
-        startActivity(intent);
-        finish();
->>>>>>> 46c4e6206ca8a0a68f450f905ddac309ec481e95
+
     }
 
     public void OnlineSync() {

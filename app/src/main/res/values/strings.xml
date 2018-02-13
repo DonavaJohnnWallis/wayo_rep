@@ -138,7 +138,7 @@
     <string name="agreement">I agree the terms and conditions.</string>
     <string name="clear_pad">Clear Pad</string>
     <string name="save_signature">Agree</string>
-<<<<<<< HEAD
+
     <string name="title_activity_signature">Signature</string>
 
     <string name="action_download">Download</string>
@@ -163,8 +163,8 @@
         <item>India</item>
     </string-array>
     <string name="title_activity_upload_photo_prelim">UploadPhotoPrelim</string>
-=======
+
     <string name="agreement2">This Agreement has been discussed and the above terms and conditions agreed by both parties on this </string>
->>>>>>> 46c4e6206ca8a0a68f450f905ddac309ec481e95
+
 
 </resources>
