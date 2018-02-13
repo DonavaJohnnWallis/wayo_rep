@@ -1,0 +1,6 @@
+<resources>
+<string-array name="install_status">
+<item>Delivery Incomplete</item>
+<item>Units not Delivered</item>
+</string-array>
+</resources>

@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_margin="20dp"
+    >
+
+
+
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#e2e2e2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+
+           >
+
+            <TextView
+                android:id="@+id/txtStoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtURN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:paddingLeft="5dp"
+                android:textColor="#000000">
+            </TextView>
+            <TextView
+                android:id="@+id/txtProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp">
+            </TextView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#a9a9a9"></LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+</LinearLayout>

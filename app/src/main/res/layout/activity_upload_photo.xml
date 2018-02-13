@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_login_activty"
+tools:context="com.vf.admin.vf_rep.UploadPhoto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="30dp"
+android:background="@drawable/backgroud_gradient">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+
+
+
+        <Button
+            android:text="From Camera"
+            android:id="@+id/ivCamera"
+
+            android:drawableRight="@drawable/ic_menu_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="350dp"
+            android:maxWidth="100dp"
+            android:minHeight="60dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#fdc313"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:textAlignment="gravity"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:text="From Gallery"
+            android:id="@+id/ivGallery"
+
+            android:drawableRight="@drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="350dp"
+            android:maxWidth="100dp"
+            android:minHeight="60dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#fdc313"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:textAlignment="gravity"
+            android:layout_weight="1"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+
+        <EditText
+
+            android:hint="Barcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editBarcode"
+            android:inputType="text" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="#efefef"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/camera"
+            android:id="@+id/ivImage"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:padding="25dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+
+        <EditText
+
+            android:hint="Product Complaint text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editProductComplaint"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <TextView
+
+            android:text="Job Card Page No"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtJobCardPageNo"
+            android:backgroundTint="#efefef"
+            android:textColor="#8f8f8f"
+            android:textSize="18dp"
+            android:textColorHint="#8f8f8f"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <RadioGroup
+            android:id="@+id/radioJobCardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:text="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio1"
+                android:backgroundTint="#8f8f8f"
+                android:textColor="#8f8f8f"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:onClick="onRadioButtonClicked"
+                />
+
+            <RadioButton
+                android:text="2"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio2"
+                android:backgroundTint="#8f8f8f"
+                android:textColor="#8f8f8f"
+                android:textSize="18dp"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:text="3"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio3"
+                android:backgroundTint="#8f8f8f"
+                android:textColor="#8f8f8f"
+                android:textSize="18dp"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:text="4"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio4"
+                android:backgroundTint="#8f8f8f"
+                android:textColor="#8f8f8f"
+                android:textSize="18dp"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+            <RadioButton
+                android:text="5"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio5"
+                android:backgroundTint="#8f8f8f"
+                android:textColor="#8f8f8f"
+                android:textSize="18dp"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+
+
+        </RadioGroup>
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#a9a9a9"> </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+
+        <Button
+            android:text="Upload"
+            android:id="@+id/ivUpload"
+
+            android:drawableRight="@drawable/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="350dp"
+            android:maxWidth="100dp"
+            android:minHeight="60dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#fdc313"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:textAlignment="gravity"
+            />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>
+

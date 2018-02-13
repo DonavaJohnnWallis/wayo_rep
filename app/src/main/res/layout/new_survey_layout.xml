@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.vf.admin.vf_rep.SurveyActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/backgroud_gradient">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#484848"
+                        >
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:srcCompat="@drawable/header_home"
+                            android:id="@+id/imageView2"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="left|center_vertical"
+                            android:textAlignment="gravity"
+                            android:padding="10dp"
+                            />
+
+                        <TextView
+                            android:text="Survey"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center_vertical"
+                            android:textAlignment="gravity"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="80"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:text="OPENING INSTRUCTION:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1101"
+                    android:backgroundTint="#efefef"
+                    android:textColor="#8f8f8f"
+                    android:textSize="18dp"
+                    android:textColorHint="#8f8f8f"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:text="Once you have arrived at the outlet be sure to check in (to capture GPS coordinates) make sure that you are at the outlet when doing this."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView11011"
+                    android:backgroundTint="#efefef"
+                    android:textColor="#8f8f8f"
+                    android:textSize="18dp"
+                    android:textColorHint="#8f8f8f"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:text="Take at least one picture of the outside of the outlet."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView11012"
+                    android:backgroundTint="#efefef"
+                    android:textColor="#8f8f8f"
+                    android:textSize="18dp"
+                    android:textColorHint="#8f8f8f"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:text="Introduce yourself to the outlet owner and manager, explaining that you are part of the Project Lighthouse Survey team, and that you are there to survey the outlet prior to installation."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1103"
+                    android:backgroundTint="#efefef"
+                    android:textColor="#8f8f8f"
+                    android:textSize="18dp"
+                    android:textColorHint="#8f8f8f"
+                    android:layout_marginTop="20dp"
+                    />
+
+
+</LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80"
+                    android:padding="20dp">
+
+
+                    <TextView
+                        android:text="1.What is the name of the person you are talking to?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#8f8f8f"
+                        android:textSize="18dp"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <EditText
+
+                        android:hint="[Enter Name]"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editTalkingToPerson"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+
+                        />
+                    <TextView
+                        android:text="2.What is their position / role?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView101"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#8f8f8f"
+                        android:textSize="18dp"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+                    <EditText
+
+                        android:hint="[Enter Role/Position]"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editTalkingToRole"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+                    <TextView
+
+                        android:text="3.Is the outlet still committed to the installation?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/three"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#8f8f8f"
+                        android:textSize="18dp"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <RadioGroup
+                            android:id="@+id/radioCommitted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:text="Yes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radioYes"
+                            android:backgroundTint="#8f8f8f"
+                            android:textColor="#8f8f8f"
+                            android:textSize="18dp"
+                            android:layout_weight="1"
+                            android:layout_marginRight="140dp"
+                            android:onClick="onRadioButtonClicked"
+                            />
+
+                        <RadioButton
+                            android:text="No"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radioNo"
+                            android:backgroundTint="#8f8f8f"
+                            android:textColor="#8f8f8f"
+                            android:textSize="18dp"
+                            android:onClick="onRadioButtonClicked"
+                            android:layout_weight="1" />
+
+
+                        </RadioGroup>
+                    </LinearLayout>
+                        <TextView
+
+                            android:text="What is the reason the outlet is not committed?"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtWhyNotCommitted"
+                            android:backgroundTint="#efefef"
+                            android:textColor="#8f8f8f"
+                            android:textSize="18dp"
+                            android:textColorHint="#8f8f8f"
+                            android:layout_marginTop="20dp"
+                            android:visibility="gone"
+                            />
+
+                        <EditText
+
+                            android:hint="[Enter Reason]"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editWhyNotCommitted"
+                            android:backgroundTint="#efefef"
+                            android:inputType="textMultiLine"
+                            android:lines="3"
+                            android:textColor="#484848"
+                            android:textColorHint="#8f8f8f"
+                            android:layout_marginTop="10dp"
+                            android:background="#efefef"
+                            android:padding="5dp"
+                            android:visibility="gone"
+                            />
+
+
+                    <TextView
+
+                        android:text="4. Please confirm the brand that the outlet believes it is receiving?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtBrand"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#8f8f8f"
+                        android:textSize="18dp"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinnerBrand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:orientation="horizontal"
+                        android:background="#efefef"
+                        android:layout_marginBottom="10dp"
+                        >
+                        </LinearLayout>
+
+
+
+                    <TextView
+
+                        android:text="5. Please confirm outlet's trading hours?"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/threed"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#8f8f8f"
+                        android:textSize="18dp"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/txtOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Opening Time"
+                        android:background="#fcd207"
+                        android:backgroundTint="#fcd207"
+                        android:padding="5dp"
+
+                        android:textColor="#ffffff"/>
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        >
+
+
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerOpeningTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set Closing Time"
+                        android:background="#fcd207"
+                        android:backgroundTint="#fcd207"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"/>
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        >
+
+
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerClosingTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:text="6. What time is best for delivery (during the day)? Please inform the client that they will be receiving approximately a pallet of unitry to store for 1-4 days."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtPreferred"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#8f8f8f"
+                        android:textSize="18dp"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        >
+
+
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp">
+
+                            <Spinner
+                                android:id="@+id/spinnerPreferredDeliveryTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                    <TextView
+
+                        android:text="7. General comments in regard to the outlet."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/threef"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#8f8f8f"
+                        android:textSize="18dp"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <EditText
+
+                        android:hint="Type comments here"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editComments"
+                        android:backgroundTint="#efefef"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="10dp"
+                        android:background="#efefef"
+                        android:padding="5dp"
+                        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <Button
+                        android:text="Next"
+                        android:id="@+id/viewstore"
+                        android:onClick="SaveSurvey"
+                        android:drawableRight="@drawable/arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                        android:minWidth="350dp"
+                        android:maxWidth="100dp"
+                        android:minHeight="60dp"
+                        android:textColor="#ffffff"
+                        android:backgroundTint="#fdc313"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="left|center_vertical"
+                        android:textAlignment="gravity"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

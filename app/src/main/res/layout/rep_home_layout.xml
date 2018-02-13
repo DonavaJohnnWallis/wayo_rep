@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.vf.admin.vf_rep.RepHomeActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@drawable/backgroud_gradient">
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logo"
+                android:id="@+id/imageView2"
+                android:layout_gravity="center_vertical|center_horizontal"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/stall"
+                android:id="@+id/imageView3"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:padding="25dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <Button
+                android:text="Add Store"
+                android:id="@+id/addstore"
+                android:onClick="addStore"
+                android:textSize="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textColor="#ffffff"
+                android:backgroundTint="#fdc313"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Store Progress"
+                android:id="@+id/viewstore"
+                android:onClick="progress"
+                android:textSize="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textColor="#ffffff"
+                android:backgroundTint="#fdc313"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Unitary Lists"
+                android:id="@+id/UnitaryLists"
+                android:onClick="UnitaryList"
+                android:textSize="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textColor="#ffffff"
+                android:backgroundTint="#fdc313"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

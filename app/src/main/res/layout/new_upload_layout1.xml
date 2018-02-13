@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.example.donavan.visaulfusion.RepInfoActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud_gradient"
+    >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#484848"
+        android:padding="10dp"
+        >
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <TextView
+
+                android:text="UNITARY IMAGE UPLOADS: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/one"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:backgroundTint="#ffffff"
+                android:textColor="#ffffff"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridViewCustom2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="1"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#484848">
+
+        <Button
+            android:id="@+id/btnnew1"
+            android:onClick="CompltedCards"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Confirm"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

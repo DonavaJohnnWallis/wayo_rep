@@ -86,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_state"
                     android:gravity="center"
-                    android:onClick="GoToScanbarcode"
+                    android:onClick="GoToStoreList"
                     android:text="View Stores" />
 
 

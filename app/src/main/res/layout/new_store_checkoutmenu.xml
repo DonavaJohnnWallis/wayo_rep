@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.example.donavan.visaulfusion.RepInfoActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud_gradient"
+    >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStoreName"
+                android:textSize="20dp"
+                android:backgroundTint="#efefef"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+            <TextView
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURN"
+                android:textSize="20dp"
+                android:backgroundTint="#efefef"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#a9a9a9"></LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnSiteComplete"
+            android:onClick="SiteComplete"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:text="Site Complete"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"/>
+
+        <Button
+            android:id="@+id/btn4"
+            android:onClick="SiteIncomplete"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:text="Site Incomplete"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

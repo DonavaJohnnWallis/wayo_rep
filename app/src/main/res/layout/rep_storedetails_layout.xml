@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.vf.admin.vf_rep.RepStoreDetailsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/backgroud_gradient">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80">
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#484848"
+                        >
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:srcCompat="@drawable/header_home"
+                            android:id="@+id/imageView2"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="left|center_vertical"
+                            android:textAlignment="gravity"
+                            android:padding="10dp"
+                            />
+
+                        <TextView
+                            android:text="Store Details"
+                            android:textColor="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:gravity="center_vertical"
+                            android:textAlignment="gravity"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80"
+                    android:padding="20dp">
+
+
+                    <EditText
+
+                        android:hint="Store Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/storeName"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+
+                        />
+                    <EditText
+
+                        android:hint="Contact Person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/contactPerson"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+                    <EditText
+
+                        android:hint="Contact Person's Phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/contactPhone"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+                    <EditText
+
+                        android:hint="Contact Person's Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/contactEmail"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <EditText
+
+                        android:hint="Address Line 1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addressLine1"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <EditText
+
+                        android:hint="Address Line 2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addressLine2"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <EditText
+
+                        android:hint="Town / City"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/townCity"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+
+                    <EditText
+
+                        android:hint="GPS Lat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gpsLat"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <EditText
+
+                        android:hint="GPS Long"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/gpsLng"
+                        android:backgroundTint="#efefef"
+                        android:textColor="#484848"
+                        android:textColorHint="#8f8f8f"
+                        android:layout_marginTop="20dp"
+                        />
+
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <Button
+                            android:id="@+id/btnChangeTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Set Opening Time"
+                            android:background="#fcd207"
+                            android:backgroundTint="#fcd207"
+                            android:padding="5dp"
+
+                            android:textColor="#ffffff"/>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/lblTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Opening time: (H:M): "
+                            android:textSize="16dp"
+                            android:textAlignment="textStart"
+                            android:layout_gravity="left"
+                            android:gravity="left"/>
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="16dp"
+                            android:textAlignment="textStart"
+                            android:layout_gravity="left"
+                            android:gravity="left"/>
+
+                            </LinearLayout>
+
+                        <TimePicker
+                            android:visibility="gone"
+                            android:id="@+id/timePicker1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#fcd207"
+                            android:backgroundTint="#fcd207"
+
+                            android:textColor="#ffffff"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        >
+
+                        <Button
+                            android:id="@+id/btnChangeTime2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Set Closing Time"
+                            android:background="#fcd207"
+                            android:backgroundTint="#fcd207"
+                            android:padding="5dp"
+                            android:textColor="#ffffff"/>
+
+                        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="10dp">
+
+                            <TextView
+                                android:id="@+id/lblTime2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Closing time: (H:M): "
+                                android:textSize="16dp"
+                                android:textAlignment="textStart"
+                                android:layout_gravity="left"
+                                android:gravity="left"/>
+
+                            <TextView
+                                android:id="@+id/tvTime2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="16dp"
+                                android:textAlignment="textStart"
+                                android:layout_gravity="left"
+                                android:gravity="left"/>
+
+                        </LinearLayout>
+
+                        <TimePicker
+                            android:visibility="gone"
+                            android:id="@+id/timePicker2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+
+
+                    <Spinner
+                        android:id="@+id/spinner2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp" />
+
+
+
+
+
+
+
+
+                    <Button
+                        android:text="Next"
+                        android:id="@+id/viewstore"
+                        android:onClick="stockinput"
+                        android:drawableRight="@drawable/arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+
+                        android:minWidth="350dp"
+                        android:maxWidth="100dp"
+                        android:minHeight="60dp"
+                        android:textColor="#ffffff"
+                        android:backgroundTint="#fdc313"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:gravity="left|center_vertical"
+                        android:textAlignment="gravity"
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

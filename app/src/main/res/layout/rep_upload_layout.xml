@@ -1,0 +1,56 @@
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.vf.admin.vf_rep.RepSelectStoreForUnitry"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud_gradient"
+    >
+
+
+
+    <GridView
+        android:id="@+id/gridViewCustom2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="1"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="60dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <Button
+            android:id="@+id/btn1"
+            android:onClick="Close"
+            android:text="Close"
+            android:drawableRight="@drawable/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="350dp"
+            android:maxWidth="100dp"
+            android:minHeight="60dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#fdc313"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="left|center_vertical"
+            android:textAlignment="gravity"
+            />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

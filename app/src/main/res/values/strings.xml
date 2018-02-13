@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">VF_rep</string>
+    <string name="app_name">Wayo</string>
+    <string name="Home">Home</string>
+    <string name="Logout">logout</string>
     <string name="title_activity_contract_one">ContractOneActivity</string>
     <string name="large_text">
         "GENERAL TERMS AND CONDITIONS FOR OUTLET BRANDING AND INSTALLATION OF VISIBILITY MATERIALS\n\n"
@@ -13,5 +15,29 @@
     <string name="agreement">I agree the terms and conditions.</string>
     <string name="clear_pad">Clear Pad</string>
     <string name="save_signature">Agree</string>
+    <string name="title_activity_signature">Signature</string>
+
+    <string name="action_download">Download</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_info">Info</string>
+
+    <string name="message">Info</string>
+    <string name="cancel">Cancel</string>
+    <string name="vInfo">Version Info</string>
+
+    <string name="c_name">Kyanogen Technologies</string>
+    <string name="country_prompt">Choose a country</string>
+    <string name="Downloads">Downloads</string>
+    <string-array name="country_arrays">
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+    <string name="title_activity_upload_photo_prelim">UploadPhotoPrelim</string>
 
 </resources>

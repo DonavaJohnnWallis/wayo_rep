@@ -1,0 +1,62 @@
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.vf.admin.vf_rep.RepProgressActivity"
+
+    >
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#e2e2e2"
+
+        android:layout_marginBottom="5dp"
+
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/textViewsub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingLeft="5dp"
+            android:textColor="#000000">
+        </TextView>
+        <TextView
+            android:id="@+id/textViewsub2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp">
+        </TextView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#a9a9a9"></LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,6 +1,8 @@
 package com.vf.admin.vf_rep;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +21,56 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home);
         viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
+
+        String isWebsiteAvailable = Local.Get(getApplicationContext(), "AmIOnline");
+        //Get Data from webservice
+        if (isWebsiteAvailable.equals("True")) {
+
+
+            GetStoresForUser(Local.Get(this.getApplication(), "UserName"), "Rep");
+
+        }
+        else{
+            //I am Offline
+            //Use locally saved lists
+           // btnUnitaryLists.setVisibility(View.VISIBLE);
+        }
+
+
+
     }
+
+
+    public void GetStoresForUser(String UserName, String Phase) {
+
+        String isWebsiteAvailable = Local.Get(getApplicationContext(), "AmIOnline");
+
+        if(isWebsiteAvailable.equals("True")) {
+
+            final AlertDialog ad = new AlertDialog.Builder(this).create();
+            MySOAPCallActivity cs = new MySOAPCallActivity();
+            try {
+
+                GetStoresForUserParams params = new GetStoresForUserParams(cs, UserName, Phase);
+
+                new CallSoapGetStoresForUser().execute(params);
+
+
+            } catch (Exception ex) {
+                ad.setTitle("Error!");
+                ad.setMessage(ex.toString());
+            }
+            ad.show();
+
+        }
+        else {
+            //I am OFFLINE
+            //Do Nothing - you'll just use the stores you have :)
+
+
+        }
+    }
+
     //links child button to parent flipper layout and contains animations
     public void ClickHome1(View view) {
         viewFlipper.setDisplayedChild(1);
@@ -69,9 +120,11 @@ public class MainActivity extends AppCompatActivity {
 
     //go to barcode scanner
 
-    public void GoToScanbarcode(View view) {
+    public void GoToStoreList(View view) {
 
-       Intent intent = new Intent(MainActivity.this, StoreListActivity.class);
+       //Intent intent = new Intent(MainActivity.this, StoreListActivity.class);
+
+        Intent intent = new Intent(MainActivity.this, RepProgressActivity.class);
 
        startActivity(intent);
     }
@@ -90,6 +143,55 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ApenixListActivity.class);
 
         startActivity(intent);
+    }
+
+
+
+    public class CallSoapGetStoresForUser extends AsyncTask<GetStoresForUserParams, Void, String> {
+
+        private Exception exception;
+
+        @Override
+        protected String doInBackground(GetStoresForUserParams... params) {
+            return params[0].foo.GetStoresForUser(params[0].username, params[0].phase);
+        }
+
+        protected void onPostExecute(String result) {
+            // TODO: check this.exception
+            // TODO: do something with the feed
+            try {
+                //process Json Result
+                //Save results in local storage
+                if(result.toLowerCase().contains("error")){
+
+                }
+                else {
+                    Local.Set(getApplicationContext(), "AndroidStores", result);
+                }
+
+            } catch (Exception ex) {
+                String e3 = ex.toString();
+            }
+
+        }
+
+
+
+    }
+    private static class GetStoresForUserParams {
+        MySOAPCallActivity foo;
+        String username;
+        String phase;
+
+
+
+        GetStoresForUserParams(MySOAPCallActivity foo, String username, String phase) {
+            this.foo = foo;
+            this.username = username;
+            this.phase = phase;
+
+
+        }
     }
 
 

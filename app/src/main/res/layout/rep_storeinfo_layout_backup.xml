@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.vf.admin.vf_rep.RepInfoActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud_gradient"
+    >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+
+                android:text="Name: Southdale Liquers "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStoreName"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="URN: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtURN"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+
+                android:hint="Progress: Not Validated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtProgress"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:hint="Contact: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtContactPerson"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:hint="Email: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtContactEmail"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+            <TextView
+                android:hint="Number: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtContactPhone"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:hint="Opens: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtOpeningTime"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+            <TextView
+                android:hint="Closes: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtClosingTime"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:text="Total Units: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1" />
+            <TextView
+                android:hint="Total number of Units: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTotalUnitCount"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+ <!--   <GridView
+        android:id="@+id/gridViewCustom4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="4"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="80dp" />-->
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn1"
+            android:onClick="SignOff"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:text="Save"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"/>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

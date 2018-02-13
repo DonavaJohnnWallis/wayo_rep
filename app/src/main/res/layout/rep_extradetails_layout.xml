@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.vf.admin.vf_rep.RepExtraDetailsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud_gradient"
+    android:padding="20dp">
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="80">
+
+
+        <Spinner
+            android:id="@+id/spinnerBrandID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:id="@+id/spinnerOutletTypeID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+        <Spinner
+            android:id="@+id/spinnerTierTypeID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_weight="80">
+
+
+        <Button
+            android:text="Next"
+            android:id="@+id/viewstore"
+            android:onClick="stockinput (RepExtraDetailsActivity)"
+            android:drawableRight="@drawable/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="350dp"
+            android:maxWidth="100dp"
+            android:minHeight="60dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#fdc313"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="left|center_vertical"
+            android:textAlignment="gravity"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+</RelativeLayout>

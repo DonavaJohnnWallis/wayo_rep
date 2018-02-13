@@ -42,24 +42,24 @@
             android:layout_weight="1">
 
             <EditText
-                android:id="@+id/UserName"
+                android:id="@+id/editUserName"
 
-                android:hint="User Name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="40dp"
                 android:backgroundTint="#efefef"
-                android:textColor="#484848"
-                android:textColorHint="#8f8f8f"
-                android:minWidth="350dp"
+                android:hint="User Name"
                 android:maxWidth="100dp"
                 android:minHeight="60dp"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginTop="40dp" />
+                android:minWidth="350dp"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f" />
 
 
             <EditText
                 android:inputType="textPassword"
-                android:id="@+id/password"
+                android:id="@+id/editPassword"
                 android:hint="Password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

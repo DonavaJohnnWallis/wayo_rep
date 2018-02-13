@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_activty"
+    tools:context="com.vf.admin.vf_rep.InstallUnitaryList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud_gradient">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtStoreName"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:hint="Desc."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/col1"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+            <TextView
+                android:hint="Image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/col2"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+            <TextView
+                android:hint="Barcode "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtBarcodeHeader"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+
+            <TextView
+                android:hint="Img Count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/col5"
+                android:backgroundTint="#efefef"
+                android:textColor="#484848"
+                android:textColorHint="#8f8f8f"
+                android:layout_marginTop="10dp"
+
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridViewCustom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="1"
+        android:layout_marginBottom="200dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnUploadJobCard"
+            android:onClick="UploadJobCard"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Completed job card"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:id="@+id/btnExteriorImage"
+            android:onClick="SurveyStoreExterior"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Exterior Image"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:id="@+id/btnProductComplaint"
+            android:onClick="ProductComplaint"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Product Complaint"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:id="@+id/btnInteriorImage"
+            android:onClick="SurveyStoreInterior"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Interior Image"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:id="@+id/btnnew3"
+            android:onClick="Close"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Confirm"
+            android:backgroundTint="#fdc313"
+            android:textColor="#ffffff"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
