@@ -2,6 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vf.admin.vf_rep">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -32,9 +46,21 @@
             android:label="Contract Page 1"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".StoreDetailsActivity" />
-        <activity android:name=".ApendixActivity"></activity>
-        <activity android:name=".ApenixListActivity"></activity>
-        <activity android:name=".SignatureActivity"></activity>
+        <activity android:name=".ApendixActivity" />
+        <activity android:name=".ApenixListActivity" />
+        <activity android:name=".SignatureActivity" />
+        <activity android:name=".RepProgressActivity" />
+        <activity android:name=".RepInfoActivity" />
+        <activity android:name=".RepSelectStoreForUnitry" />
+        <activity android:name=".RepStoreDetailsActivity" />
+        <activity android:name=".RepUnitaryList" />
+        <activity android:name=".RepHomeActivity" />
+
+
+        <activity
+            android:name=".Signature"
+            android:label="@string/title_activity_signature"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
