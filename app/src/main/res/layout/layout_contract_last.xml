@@ -8,46 +8,54 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+
     <TextView
-        android:id="@+id/homescreenIntroText2"
-        style="@style/info_text"
+        android:id="@+id/agreement"
+
+        android:text="@string/agreement2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please enter store details \n The details will be populated in the contract"
 
         />
 
-    <EditText
-        android:id="@+id/storename"
+    <TextView
+        android:id="@+id/date"
+        style="@style/info_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        />
+
+    <TextView
+        android:id="@+id/storenametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:ems="10"
-        android:hint="Store Name"
-        android:layout_marginBottom="30dp"/>
+        android:text="For outlet: {Outlet Name}" />
 
     <EditText
-        android:id="@+id/address"
+        android:id="@+id/yourname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:ems="10"
-        android:hint="Address"
-        android:layout_marginBottom="30dp"/>
+        android:hint="Your Name" />
 
     <EditText
-        android:id="@+id/pobox"
+        android:id="@+id/Designation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="PO Box"
-        android:layout_marginBottom="30dp"/>
+        android:hint="Designation" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Continue"
-        android:onClick="OpenContract"
+        android:onClick="GoToSignatureNew"
         style="@style/button_style"
         android:background="@drawable/button_state"/>
 </LinearLayout>

@@ -51,6 +51,7 @@ public class StoreListContractsActivity extends AppCompatActivity {
                                     long arg3) {
                 Intent i = new  Intent(getApplicationContext(),StoreDetailsActivity.class);
                 startActivity(i);
+                finish();
 
             }
 

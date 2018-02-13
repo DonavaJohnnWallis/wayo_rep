@@ -51,8 +51,8 @@ public class AdapterStorelist extends ArrayAdapter {
 
 
 
-            textViewTitle.setText("@50 Bar");
-            imageViewIte.setText("KIS-T-KT2-1714");
+            textViewTitle.setText("Store Name");
+            imageViewIte.setText("Store URN 000 00 00");
             url.setText("View More");
 
 
