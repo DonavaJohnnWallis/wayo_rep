@@ -16,7 +16,7 @@ import android.widget.Switch;
 import android.widget.CompoundButton;
 
 public class ContractOneActivity extends AppCompatActivity {
-
+    Integer globalStoreID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,8 @@ public class ContractOneActivity extends AppCompatActivity {
         addresstext.setText(bu.getString("address"));
         potext.setText(bu.getString("pobox"));
 
-
+        Intent me = getIntent();
+        globalStoreID = me.getIntExtra("ID", 0);
 
 
         //Get widgets reference from XML layout
@@ -77,7 +78,7 @@ public class ContractOneActivity extends AppCompatActivity {
         intent.putExtra("storename",storetext.getText().toString());
         intent.putExtra("address",addresstext.getText().toString());
         intent.putExtra("pobox",potext.getText().toString());
-
+intent.putExtra("ID", globalStoreID);
         startActivity(intent);
         finish();
 

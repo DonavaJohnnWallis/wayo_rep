@@ -9,13 +9,14 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 
 public class ContractThreeActivity extends AppCompatActivity {
-
+    Integer globalStoreID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_contract_three);
-
+        Intent me = getIntent();
+        globalStoreID = me.getIntExtra("ID", 0);
         //Get widgets reference from XML layout
 
         Switch sButton = (Switch) findViewById(R.id.switch_btn);
@@ -44,7 +45,7 @@ public class ContractThreeActivity extends AppCompatActivity {
     public void next(View view) {
 
         Intent intent = new Intent(ContractThreeActivity.this, ContractFourActivity.class);
-
+        intent.putExtra("ID", globalStoreID);
         startActivity(intent);
         finish();
     }

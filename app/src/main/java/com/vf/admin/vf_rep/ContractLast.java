@@ -10,13 +10,13 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 
 public class ContractLast extends AppCompatActivity {
-
+    Integer globalStoreID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_contract_last);
-
-
+        Intent me = getIntent();
+        globalStoreID = me.getIntExtra("ID", 0);
 
 
         Thread t = new Thread() {
@@ -51,7 +51,8 @@ public class ContractLast extends AppCompatActivity {
 
         Intent intent = new Intent(ContractLast.this, SignatureActivity.class);
 
-
+        intent.putExtra("FromScreen", "Contract");
+        intent.putExtra("ID", globalStoreID);
         startActivity(intent);
         finish();
     }

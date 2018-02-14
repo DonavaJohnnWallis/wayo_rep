@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class StoreDetailsActivity extends AppCompatActivity {
+    Integer globalStoreID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class StoreDetailsActivity extends AppCompatActivity {
             address.setText(me.getStringExtra("AddressLine1"));
         }
 
+        globalStoreID = me.getIntExtra("ID",0);
     }
 
     public void OpenContract(View view) {
@@ -43,6 +45,7 @@ public class StoreDetailsActivity extends AppCompatActivity {
         intent.putExtra("storename",storename.getText().toString());
         intent.putExtra("address",address.getText().toString());
         intent.putExtra("pobox",pobox.getText().toString());
+        intent.putExtra("ID", globalStoreID);
 
         startActivity(intent);
         finish();

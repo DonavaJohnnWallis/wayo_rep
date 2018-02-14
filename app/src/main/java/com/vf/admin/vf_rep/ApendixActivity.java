@@ -33,7 +33,7 @@ public class ApendixActivity extends AppCompatActivity {
     GridView gridView;
     AdapterApendix gridViewCustomeAdapter;
     ArrayList<AndroidStoreUnitExplicit> myunits;
-
+    Integer globalStoreID;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -49,7 +49,7 @@ public class ApendixActivity extends AppCompatActivity {
 
 
         myunits = getstoreUnitsExplicit(me.getStringExtra("StoreNameURN"));
-
+        globalStoreID = me.getIntExtra("ID", 0);
 
 
         gridView=(GridView)findViewById(R.id.gridViewCustom2);
@@ -70,6 +70,9 @@ public class ApendixActivity extends AppCompatActivity {
     public void Confirm(View view) {
 
         Intent intent = new Intent(ApendixActivity.this, SignatureActivity.class);
+
+        intent.putExtra("FromScreen", "Appendix");
+        intent.putExtra("ID", globalStoreID);
 
         startActivity(intent);
         finish();
