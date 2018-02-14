@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 // Custom Adapters for RepUpload Activity
 //style xml files are grid_row_uploads.xml
 
@@ -16,20 +18,22 @@ import android.widget.TextView;
 public class AdapterStorelistApendix extends ArrayAdapter {
 
     Context context;
+    private ArrayList<AndroidStore> data = new ArrayList<AndroidStore>();
 
 
 
-
-    public AdapterStorelistApendix(Context context)
+    public AdapterStorelistApendix(Context context, ArrayList<AndroidStore> data)
     {
         super(context, 0);
         this.context=context;
+        this.data = data;
 
     }
 
+    @Override
     public int getCount()
     {
-        return 16;
+        return data.size();
     }
 
     @Override
@@ -48,18 +52,23 @@ public class AdapterStorelistApendix extends ArrayAdapter {
             TextView url = (TextView) row.findViewById(R.id.textView3);
 
 
-
-
-
-            textViewTitle.setText("Store Name");
+         /*   textViewTitle.setText("Store Name");
             imageViewIte.setText("Store URN: 00 000 000");
+            url.setText("View Appendix");*/
+
+            //Get class from data
+            AndroidStore item = data.get(position);
+
+            //Set control values
+            textViewTitle.setText(item.getStoreName());
+            imageViewIte.setText(item.getURN());
             url.setText("View Appendix");
 
 
-
-
         }
-
+        else{
+            row = (View) convertView;
+        }
 
 
 

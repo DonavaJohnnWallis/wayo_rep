@@ -78,7 +78,7 @@ public class MySOAPCallActivity
     public  final String WSDL_TARGET_NAMESPACE = "http://tempuri.org/";
 
     //LIVE
-    public  final String SOAP_ADDRESS = "http://testingwayo.winninginontrade.miid.co.za/WayoWebWebService.asmx";
+    public  final String SOAP_ADDRESS = "http://www.winninginontrade.com/VFEFCIPWebService.asmx";
     //public  final String SOAP_ADDRESS = "http://www.orbitdevtest.co.za/VFEFCIPWebService.asmx";
     public MySOAPCallActivity()
     {
