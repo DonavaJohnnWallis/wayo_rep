@@ -11,6 +11,7 @@ import android.widget.Switch;
 public class ContractTwoActivity extends AppCompatActivity {
 
     Integer globalStoreID;
+    String globalStoreNameURN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,7 @@ public class ContractTwoActivity extends AppCompatActivity {
         Intent me = getIntent();
         globalStoreID = me.getIntExtra("ID", 0);
         //Get widgets reference from XML layout
-
+        globalStoreNameURN = me.getStringExtra("StoreNameURN");
         Switch sButton = (Switch) findViewById(R.id.switch_btn);
         Button btn = (Button) findViewById(R.id.button3);
         btn.setEnabled(false);

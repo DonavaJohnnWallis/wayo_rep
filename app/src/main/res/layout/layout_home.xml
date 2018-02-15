@@ -132,7 +132,7 @@
                     style="@style/info_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Contracts and appendix \n Choose an option below to sign of on contracts or unit appendix" />
+                    android:text="Contracts and appendix" />
 
                 <LinearLayout
                     android:id="@+id/container"
@@ -151,7 +151,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_state"
                         android:onClick="GoToContracts"
-                        android:text="Contracts" />
+                        android:text="Select a Store" />
 
                     <Button
 
@@ -162,7 +162,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/button_state"
                         android:onClick="GoToApendix"
-
+                        android:visibility="gone"
                         android:text="Appendix" />
 
 

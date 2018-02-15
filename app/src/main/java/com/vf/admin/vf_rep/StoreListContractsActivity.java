@@ -1,8 +1,10 @@
 package com.vf.admin.vf_rep;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -27,6 +29,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.vf.admin.vf_rep.R;
 
@@ -42,14 +46,19 @@ public class StoreListContractsActivity extends AppCompatActivity
     GridView gridView;
     RepGridViewCustomProgress grisViewCustomeAdapter;
     ArrayList<AndroidStore> mystores;
-
+    AndroidStore globalstore;
 
     @Override
-    public void onBackPressed() {     }      @Override  protected void onCreate(Bundle savedInstanceState)
+    public void onBackPressed() {     }
+    @Override  protected void onCreate(Bundle savedInstanceState)
 {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.rep_progress_layout);
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+    TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
+    txtProgress.setVisibility(View.INVISIBLE);
+    txtProgress.setText("Please wait...");
 
     mystores = getStoresData();
 
@@ -67,45 +76,12 @@ public class StoreListContractsActivity extends AppCompatActivity
         @Override
         public void onItemClick(AdapterView<?> arg0, View v, int pos, long id) {
             //Toast.makeText(getApplicationContext(), names[pos], Toast.LENGTH_LONG).show();
-
-            Intent intent = new Intent(StoreListContractsActivity.this, StoreDetailsActivity.class );
-
-            AndroidStore store = mystores.get(pos);
-            intent.putExtra("ID", store.getID());
-            intent.putExtra("StoreName", store.getStoreName());
-            intent.putExtra("URN", store.getURN());
-            intent.putExtra("StoreNameURN", store.getStoreNameURN());
-
-            intent.putExtra("CurrentPhase", store.getCurrentPhase());
-            intent.putExtra("RegionName", store.getRegionName());
-            intent.putExtra("BrandName", store.getBrandName());
-            intent.putExtra("TierTypeName", store.getTierTypeName());
-            intent.putExtra("OutletTypeName", store.getOutletTypeName());
-            intent.putExtra("ContactPerson", store.getContactPerson());
-            intent.putExtra("ContactEmail", store.getContactEmail());
-            intent.putExtra("ContactPhone", store.getContactPhone());
-            intent.putExtra("OpeningTime", store.getOpeningTime());
-            intent.putExtra("ClosingTime", store.getClosingTime());
-            intent.putExtra("TotalUnitCount", store.getTotalUnitCount());
-            intent.putExtra("AddressLine1", store.getAddressLine1());
-            intent.putExtra("AddressLine2", store.getAddressLine2());
-            intent.putExtra("TownCity", store.getTownCity());
-            intent.putExtra("RepFirstNameSurname", store.getRepFirstNameSurname());
-            intent.putExtra("RepJobTitle", store.getRepJobTitle());
-            intent.putExtra("RepCellNo", store.getRepCellNo());
-            intent.putExtra("TssFirstNameSurname", store.getTssFirstNameSurname());
-            intent.putExtra("TssJobTitle", store.getTssJobTitle());
-            intent.putExtra("TssCellNo", store.getTssCellNo());
-            intent.putExtra("InsFirstNameSurname", store.getInsFirstNameSurname());
-            intent.putExtra("InsJobTitle", store.getInsJobTitle());
-            intent.putExtra("InsCellNo", store.getInsCellNo());
-            intent.putExtra("DateRecordChanged", store.getDateRecordChanged());
-            intent.putExtra("GpsLat", store.getGpsLat());
-            intent.putExtra("GpsLng", store.getGpsLng());
+            globalstore = mystores.get(pos);
+            TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
+            txtProgress.setVisibility(View.VISIBLE);
+            GetUnitListsForUserExplicit(Local.Get(getApplicationContext(), "UserName"), false, globalstore.getID());
 
 
-
-            startActivity(intent); finish();
         }
 
     } );
@@ -192,6 +168,131 @@ public class StoreListContractsActivity extends AppCompatActivity
 
         return stores;
     }
+
+    public void GetUnitListsForUserExplicit(String UserName, Boolean IsSurvey, Integer StoreID) {
+
+        String isWebsiteAvailable = Local.Get(getApplicationContext(), "AmIOnline");
+
+        if(isWebsiteAvailable.equals("True")) {
+
+            final AlertDialog ad = new AlertDialog.Builder(this).create();
+            MySOAPCallActivity cs = new MySOAPCallActivity();
+            try {
+
+                GetUnitListsForUserExplicitParams params = new GetUnitListsForUserExplicitParams(cs, UserName, IsSurvey, StoreID);
+
+                new CallSoapGetUnitListsForUserExplicit().execute(params);
+
+
+            } catch (Exception ex) {
+                ad.setTitle("Error!");
+                ad.setMessage(ex.toString());
+            }
+            ad.show();
+
+        }
+        else {
+            //I am OFFLINE
+            //Do Nothing - you'll just use the stores you have :)
+
+
+        }
+    }
+
+
+    public class CallSoapGetUnitListsForUserExplicit extends AsyncTask<GetUnitListsForUserExplicitParams, Void, String> {
+
+        private Exception exception;
+
+        @Override
+        protected String doInBackground(GetUnitListsForUserExplicitParams... params) {
+            return params[0].foo.GetUnitListsForUserExplicit(params[0].username, params[0].issurvey, params[0].storeid);
+        }
+
+        protected void onPostExecute(String result) {
+            // TODO: check this.exception
+            // TODO: do something with the feed
+            try {
+                //process Json Result
+                //Save results in local storage
+                if(result.toLowerCase().contains("error") || result.toLowerCase().contains("exception")){
+
+                    Toast.makeText(getApplicationContext(), "Getting data timed out. Please try again.", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Local.Set(getApplicationContext(), "AndroidStoreUnitsExplicit", result);
+                    TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
+                    txtProgress.setVisibility(View.VISIBLE);
+
+                    //CAll the next screen
+                    AndroidStore store = globalstore;
+                    Intent intent = new Intent(StoreListContractsActivity.this, StoreDetailsActivity.class );
+
+                    intent.putExtra("ID", store.getID());
+                    intent.putExtra("StoreName", store.getStoreName());
+                    intent.putExtra("URN", store.getURN());
+                    intent.putExtra("StoreNameURN", store.getStoreNameURN());
+
+                    intent.putExtra("CurrentPhase", store.getCurrentPhase());
+                    intent.putExtra("RegionName", store.getRegionName());
+                    intent.putExtra("BrandName", store.getBrandName());
+                    intent.putExtra("TierTypeName", store.getTierTypeName());
+                    intent.putExtra("OutletTypeName", store.getOutletTypeName());
+                    intent.putExtra("ContactPerson", store.getContactPerson());
+                    intent.putExtra("ContactEmail", store.getContactEmail());
+                    intent.putExtra("ContactPhone", store.getContactPhone());
+                    intent.putExtra("OpeningTime", store.getOpeningTime());
+                    intent.putExtra("ClosingTime", store.getClosingTime());
+                    intent.putExtra("TotalUnitCount", store.getTotalUnitCount());
+                    intent.putExtra("AddressLine1", store.getAddressLine1());
+                    intent.putExtra("AddressLine2", store.getAddressLine2());
+                    intent.putExtra("TownCity", store.getTownCity());
+                    intent.putExtra("RepFirstNameSurname", store.getRepFirstNameSurname());
+                    intent.putExtra("RepJobTitle", store.getRepJobTitle());
+                    intent.putExtra("RepCellNo", store.getRepCellNo());
+                    intent.putExtra("TssFirstNameSurname", store.getTssFirstNameSurname());
+                    intent.putExtra("TssJobTitle", store.getTssJobTitle());
+                    intent.putExtra("TssCellNo", store.getTssCellNo());
+                    intent.putExtra("InsFirstNameSurname", store.getInsFirstNameSurname());
+                    intent.putExtra("InsJobTitle", store.getInsJobTitle());
+                    intent.putExtra("InsCellNo", store.getInsCellNo());
+                    intent.putExtra("DateRecordChanged", store.getDateRecordChanged());
+                    intent.putExtra("GpsLat", store.getGpsLat());
+                    intent.putExtra("GpsLng", store.getGpsLng());
+
+
+
+                    startActivity(intent); finish();
+
+
+
+                }
+
+            } catch (Exception ex) {
+                String e3 = ex.toString();
+            }
+
+        }
+
+
+
+    }
+    private static class GetUnitListsForUserExplicitParams {
+        MySOAPCallActivity foo;
+        String username;
+        Boolean issurvey;
+        Integer storeid;
+
+
+        GetUnitListsForUserExplicitParams(MySOAPCallActivity foo, String username, Boolean issurvey, Integer storeid) {
+            this.foo = foo;
+            this.username = username;
+            this.issurvey = issurvey;
+            this.storeid=storeid;
+        }
+    }
+
+
 
 }
 

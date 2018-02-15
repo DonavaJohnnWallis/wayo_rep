@@ -34,6 +34,7 @@ public class ApendixActivity extends AppCompatActivity {
     AdapterApendix gridViewCustomeAdapter;
     ArrayList<AndroidStoreUnitExplicit> myunits;
     Integer globalStoreID;
+    String globalStoreNameURN;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -45,10 +46,8 @@ public class ApendixActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         boolean mIsSurvey = false;
         Intent me = getIntent();
-
-
-
-        myunits = getstoreUnitsExplicit(me.getStringExtra("StoreNameURN"));
+        globalStoreNameURN = me.getStringExtra("StoreNameURN");
+        myunits = getstoreUnitsExplicit(globalStoreNameURN);
         globalStoreID = me.getIntExtra("ID", 0);
 
 
