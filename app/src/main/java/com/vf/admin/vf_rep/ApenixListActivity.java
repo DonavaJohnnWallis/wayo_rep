@@ -1,6 +1,7 @@
 package com.vf.admin.vf_rep;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -65,13 +66,33 @@ public class ApenixListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View v, int pos, long id) {
 
+                //Declare progress dialoge
+                ProgressDialog progressDialog;
+
+
                 globalstore = mystores.get(pos);
                 //Rather call the webservice here
                 TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
                 txtProgress.setVisibility(View.VISIBLE);
                 GetUnitListsForUserExplicit(Local.Get(getApplicationContext(), "UserName"), false, globalstore.getID());
 
-
+                //set and remove prrogress bar
+                progressDialog = new ProgressDialog(ApenixListActivity.this);
+                progressDialog.setMessage("Loading Lists "); // Setting Message
+                progressDialog.setTitle("Please Wait..."); // Setting Title
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+                progressDialog.show(); // Display Progress Dialog
+                progressDialog.setCancelable(false);
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            Thread.sleep(10000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        // progressDialog.dismiss();
+                    }
+                }).start();
 
             }
 
