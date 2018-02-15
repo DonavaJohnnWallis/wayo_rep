@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class StoreDetailsActivity extends AppCompatActivity {
     Integer globalStoreID;
-
+    String globalStoreNameURN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,7 @@ public class StoreDetailsActivity extends AppCompatActivity {
         }
 
         globalStoreID = me.getIntExtra("ID",0);
+        globalStoreNameURN = me.getStringExtra("StoreNameURN");
     }
 
     public void OpenContract(View view) {
@@ -46,7 +47,7 @@ public class StoreDetailsActivity extends AppCompatActivity {
         intent.putExtra("address",address.getText().toString());
         intent.putExtra("pobox",pobox.getText().toString());
         intent.putExtra("ID", globalStoreID);
-
+        intent.putExtra("StoreNameURN",      globalStoreNameURN );
         startActivity(intent);
         finish();
     }

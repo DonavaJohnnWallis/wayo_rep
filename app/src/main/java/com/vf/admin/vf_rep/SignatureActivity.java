@@ -42,6 +42,7 @@ public class SignatureActivity extends Activity {
     private Button mSaveButton;
     private Integer mGlobalStoreID;
     private String mGlobalSignatureType;
+    private String globalStoreNameURN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class SignatureActivity extends Activity {
         mGlobalSignatureType = String.format("Signature%s", me.getStringExtra("FromScreen"));
 
         mGlobalStoreID = me.getIntExtra("ID",0);
+        globalStoreNameURN = me.getStringExtra("StoreNameURN");
 
         mSignaturePad = (SignaturePad) findViewById(R.id.signature_pad);
         mSignaturePad.setOnSignedListener(new SignaturePad.OnSignedListener() {
@@ -332,9 +334,20 @@ public class SignatureActivity extends Activity {
     public void WhenUploadIsComplete ()throws JSONException {
         Intent me = getIntent();
 
-        Intent i = new  Intent(getApplicationContext(),SuccessActivity.class);
+        if(mGlobalSignatureType.equals("SignatureContract")){//Contract is complete so go to Appendix for this store
 
-        startActivity(i);
+            Intent i = new Intent(getApplicationContext(), ApendixActivity.class);
+
+            i.putExtra("StoreNameURN", globalStoreNameURN);
+
+            startActivity(i);
+        }
+        else {
+
+            Intent i = new Intent(getApplicationContext(), SuccessActivity.class);
+
+            startActivity(i);
+        }
 
        /* String ImageType = getIntent().getStringExtra("ImageType");
         Integer ID = getIntent().getIntExtra("RequestID", 0);

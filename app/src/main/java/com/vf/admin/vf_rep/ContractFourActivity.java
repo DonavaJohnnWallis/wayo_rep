@@ -10,13 +10,14 @@ import android.widget.Switch;
 
 public class ContractFourActivity extends AppCompatActivity {
 
-    Integer globalStoreID;
+    Integer globalStoreID; String globalStoreNameURN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_contract_four);
         Intent me = getIntent();
         globalStoreID = me.getIntExtra("ID", 0);
+        globalStoreNameURN = me.getStringExtra("StoreNameURN");
         //Get widgets reference from XML layout
 
         Switch sButton = (Switch) findViewById(R.id.switch_btn);
