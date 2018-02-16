@@ -44,9 +44,7 @@ public class ApenixListActivity extends AppCompatActivity {
         setContentView(R.layout.layout_storelist);
 
 
-        TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
-        txtProgress.setVisibility(View.INVISIBLE);
-        txtProgress.setText("Please wait...");
+
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mystores = getStoresData();
@@ -72,8 +70,7 @@ public class ApenixListActivity extends AppCompatActivity {
 
                 globalstore = mystores.get(pos);
                 //Rather call the webservice here
-                TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
-                txtProgress.setVisibility(View.VISIBLE);
+
 
 
                 //set and remove prrogress bar

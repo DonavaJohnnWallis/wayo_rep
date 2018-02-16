@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -43,6 +44,11 @@ public class ApendixActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.layout_apendix);
+
+
+        TextView txtUnitListHeader = (TextView) findViewById(R.id.txtUnitListHeader);
+        txtUnitListHeader.setText(String.format("Unit list for store: %s", globalStoreNameURN));
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         boolean mIsSurvey = false;
         Intent me = getIntent();

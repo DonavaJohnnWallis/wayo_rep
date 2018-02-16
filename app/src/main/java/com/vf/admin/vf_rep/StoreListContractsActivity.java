@@ -1,6 +1,7 @@
 package com.vf.admin.vf_rep;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -56,9 +57,10 @@ public class StoreListContractsActivity extends AppCompatActivity
     setContentView(R.layout.rep_progress_layout);
     setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-    TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
-    txtProgress.setVisibility(View.INVISIBLE);
-    txtProgress.setText("Please wait...");
+
+    TextView textHeader = (TextView) findViewById(R.id.textHeader);
+
+    textHeader.setText(String.format("Store list for %s", Local.Get(getApplicationContext(), "UserName")));
 
     mystores = getStoresData();
 
@@ -77,8 +79,28 @@ public class StoreListContractsActivity extends AppCompatActivity
         public void onItemClick(AdapterView<?> arg0, View v, int pos, long id) {
             //Toast.makeText(getApplicationContext(), names[pos], Toast.LENGTH_LONG).show();
             globalstore = mystores.get(pos);
-            TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
-            txtProgress.setVisibility(View.VISIBLE);
+            ProgressDialog progressDialog;
+
+            //set and remove prrogress bar
+            progressDialog = new ProgressDialog(StoreListContractsActivity.this);
+            progressDialog.setMessage("Loading Lists "); // Setting Message
+            progressDialog.setTitle("Please Wait..."); // Setting Title
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+            progressDialog.show(); // Display Progress Dialog
+            progressDialog.setCancelable(false);
+            new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        Thread.sleep(10000);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    // progressDialog.dismiss();
+                }
+            }).start();
+
+
+
             GetUnitListsForUserExplicit(Local.Get(getApplicationContext(), "UserName"), false, globalstore.getID());
 
 
@@ -221,8 +243,7 @@ public class StoreListContractsActivity extends AppCompatActivity
                 }
                 else {
                     Local.Set(getApplicationContext(), "AndroidStoreUnitsExplicit", result);
-                    TextView txtProgress = (TextView) findViewById(R.id.txtProgress);
-                    txtProgress.setVisibility(View.VISIBLE);
+
 
                     //CAll the next screen
                     AndroidStore store = globalstore;

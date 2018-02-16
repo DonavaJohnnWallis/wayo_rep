@@ -48,6 +48,7 @@ public class ContractThreeActivity extends AppCompatActivity {
 
         Intent intent = new Intent(ContractThreeActivity.this, ContractFourActivity.class);
         intent.putExtra("ID", globalStoreID);
+        intent.putExtra("StoreNameURN",      globalStoreNameURN );
         startActivity(intent);
         finish();
     }

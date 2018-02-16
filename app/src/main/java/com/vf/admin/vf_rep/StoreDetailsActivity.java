@@ -16,7 +16,7 @@ public class StoreDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.layout_store_details);
         EditText storename = findViewById(R.id.storename);
         EditText address = findViewById(R.id.address);
-        EditText pobox = findViewById(R.id.pobox);
+        //EditText pobox = findViewById(R.id.pobox);
 
         Intent me = getIntent();
         String strStoreName = me.getStringExtra("StoreNameURN");
@@ -37,7 +37,7 @@ public class StoreDetailsActivity extends AppCompatActivity {
     public void OpenContract(View view) {
         EditText storename = findViewById(R.id.storename);
         EditText address = findViewById(R.id.address);
-        EditText pobox = findViewById(R.id.pobox);
+       // EditText pobox = findViewById(R.id.pobox);
 
 
 
@@ -45,7 +45,7 @@ public class StoreDetailsActivity extends AppCompatActivity {
 
         intent.putExtra("storename",storename.getText().toString());
         intent.putExtra("address",address.getText().toString());
-        intent.putExtra("pobox",pobox.getText().toString());
+       // intent.putExtra("pobox",pobox.getText().toString());
         intent.putExtra("ID", globalStoreID);
         intent.putExtra("StoreNameURN",      globalStoreNameURN );
         startActivity(intent);

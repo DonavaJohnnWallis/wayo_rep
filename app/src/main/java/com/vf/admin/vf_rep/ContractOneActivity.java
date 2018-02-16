@@ -26,12 +26,12 @@ public class ContractOneActivity extends AppCompatActivity {
 
         TextView storetext = (TextView) findViewById(R.id.storenametext);
         TextView addresstext = (TextView) findViewById(R.id.roadtext);
-        TextView potext = (TextView) findViewById(R.id.poboxtext);
+        //TextView potext = (TextView) findViewById(R.id.poboxtext);
         Bundle bu;
         bu=getIntent().getExtras();
         storetext.setText(bu.getString("storename"));
         addresstext.setText(bu.getString("address"));
-        potext.setText(bu.getString("pobox"));
+       // potext.setText(bu.getString("pobox"));
 
         Intent me = getIntent();
         globalStoreID = me.getIntExtra("ID", 0);
@@ -74,11 +74,11 @@ public class ContractOneActivity extends AppCompatActivity {
 
         TextView storetext = (TextView) findViewById(R.id.storenametext);
         TextView addresstext = (TextView) findViewById(R.id.roadtext);
-        TextView potext = (TextView) findViewById(R.id.poboxtext);
+       // TextView potext = (TextView) findViewById(R.id.poboxtext);
 
         intent.putExtra("storename",storetext.getText().toString());
         intent.putExtra("address",addresstext.getText().toString());
-        intent.putExtra("pobox",potext.getText().toString());
+       // intent.putExtra("pobox",potext.getText().toString());
 intent.putExtra("ID", globalStoreID);
 intent.putExtra("StoreNameURN",      globalStoreNameURN );
 

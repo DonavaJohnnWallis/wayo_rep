@@ -68,18 +68,18 @@
 
                 tools:layout_editor_absoluteX="117dp"
                 tools:layout_editor_absoluteY="72dp"
-                android:hint="No Road Set"/>
+                android:hint="[No Address Given]"/>
 
-            <TextView
+           <!-- <TextView
                 android:id="@+id/textView4ab"
                 style="@style/contract"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/contract1ba"
                 tools:layout_editor_absoluteX="117dp"
-                tools:layout_editor_absoluteY="72dp" />
+                tools:layout_editor_absoluteY="72dp" />-->
 
-            <TextView
+          <!--  <TextView
                 android:id="@+id/poboxtext"
                 style="@style/contract"
                 android:layout_width="match_parent"
@@ -87,7 +87,7 @@
 
                 tools:layout_editor_absoluteX="117dp"
                 tools:layout_editor_absoluteY="72dp"
-                android:hint="No PO Box Set"/>
+                android:hint="No PO Box Set"/>-->
 
 
             <TextView

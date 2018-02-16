@@ -983,7 +983,15 @@
                 android:backgroundTint="#fdc313"
                 android:textColor="#ffffff"/>
 
-
+            <Button
+                android:id="@+id/btnWWW"
+                android:onClick="GoOnline"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:text="Documents Online"
+                android:backgroundTint="#fdc313"
+                android:textColor="#ffffff"/>
 
         </LinearLayout>
 

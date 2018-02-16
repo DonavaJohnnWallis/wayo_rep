@@ -3,6 +3,7 @@ package com.vf.admin.vf_rep;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -26,7 +27,7 @@ public class RepInfoActivity extends AppCompatActivity
 
     GridView gridView;
     RepGridViewCustomImages grisViewCustomeAdapter;
-
+Integer mGlobalStoreID;
 
     protected String parseTimeForDisplay(String dateTimeWithT)
     {
@@ -69,7 +70,7 @@ public class RepInfoActivity extends AppCompatActivity
 
             Intent me = getIntent();
 
-
+            mGlobalStoreID = me.getIntExtra("ID",0);
 
             String strStoreName = me.getStringExtra("StoreNameURN");
             if(strStoreName != null)
@@ -304,4 +305,13 @@ public class RepInfoActivity extends AppCompatActivity
         startActivity(intent); finish();
 
     }
+
+    public void GoOnline(View view) {
+
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo?id=%s",mGlobalStoreID))));
+        finish();
+
+    }
+
+
 }

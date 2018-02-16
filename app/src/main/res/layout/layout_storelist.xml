@@ -56,22 +56,5 @@
 
 
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:padding="20dp"
-        >
 
-
-        <TextView
-            android:id="@+id/txtProgress"
-            android:textSize="30dp"
-            android:textColor="#0000FF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
-    </LinearLayout>
 </RelativeLayout>
