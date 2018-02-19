@@ -50,7 +50,7 @@
         <activity
             android:name=".ContractOneActivity"
             android:label="Contract Page 1"
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity android:name=".StoreDetailsActivity" />
         <activity android:name=".ApendixActivity" />
         <activity android:name=".ApenixListActivity" />
@@ -64,7 +64,7 @@
         <activity
             android:name=".Signature"
             android:label="@string/title_activity_signature"
-            android:theme="@style/AppTheme.NoActionBar" />
+           />
         <activity android:name=".ContractTwoActivity" />
         <activity android:name=".ContractThreeActivity" />
         <activity android:name=".ContractFourActivity" />
