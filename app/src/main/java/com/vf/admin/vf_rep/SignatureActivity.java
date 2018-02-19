@@ -60,7 +60,7 @@ public class SignatureActivity extends Activity {
         mSignaturePad.setOnSignedListener(new SignaturePad.OnSignedListener() {
             @Override
             public void onStartSigning() {
-                Toast.makeText(SignatureActivity.this, "OnStartSigning", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(SignatureActivity.this, "OnStartSigning", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -95,7 +95,7 @@ public class SignatureActivity extends Activity {
                 String filePath = addJpgSignatureToGallery(signatureBitmap, fileName);
 
                 if (filePath !="False") {
-                    Toast.makeText(SignatureActivity.this, "JPG Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(SignatureActivity.this, "JPG Signature saved into the Gallery", Toast.LENGTH_SHORT).show();
                     String strUserName = Local.Get(getApplicationContext(),"UserName");
 
                     Bitmap bitmap = null;//1024,1024).getBitmap();
@@ -453,7 +453,7 @@ public class SignatureActivity extends Activity {
                     intent.putExtra("DateConfirmed", appointment.getDateConfirmed());
                     intent.putExtra("DateRecordChanged", appointment.getDateRecordChanged());
                     intent.putExtra("Address", appointment.getAddress());
-                    intent.putExtra("Region", appointment.getRegion());
+                    intent.putExtra("Territory", appointment.getTerritory());
 
                     intent.putExtra("BrandName", appointment.getBrandName());
                     intent.putExtra("OutletTypeName", appointment.getOutletTypeName());

@@ -134,10 +134,10 @@
 
             <TextView
 
-                android:text="Region"
+                android:text="Territory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtRegionNameLbl"
+                android:id="@+id/txtTerritoryNameLbl"
                 android:backgroundTint="#efefef"
                 android:textColor="#484848"
                 android:textColorHint="#8f8f8f"
@@ -146,10 +146,10 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:hint="[Region]"
+                android:hint="[Territory]"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtRegionName"
+                android:id="@+id/txtTerritoryName"
                 android:backgroundTint="#efefef"
                 android:textColor="#484848"
                 android:textColorHint="#8f8f8f"
@@ -301,7 +301,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -336,7 +336,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -441,7 +441,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -476,7 +476,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -511,7 +511,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -686,7 +686,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -721,7 +721,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -756,7 +756,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -791,7 +791,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -826,7 +826,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -861,7 +861,7 @@
 
 
 
-        <LinearLayout
+        <LinearLayout android:visibility="gone"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -985,14 +985,14 @@
 
             <Button
                 android:id="@+id/btnWWW"
-                android:onClick="GoOnline"
+
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
                 android:text="Documents Online"
                 android:backgroundTint="#fdc313"
                 android:textColor="#ffffff"/>
-
+            <!--android:onClick="GoOnline"-->
         </LinearLayout>
 
 

@@ -28,7 +28,7 @@ public class AndroidAppointment {
     public String DateConfirmed;
     public String DateRecordChanged;
     public int Mileage;
-    public String Region;
+    public String Territory;
     public String Address;
     public String BrandName;
     public String OutletTypeName;
@@ -235,12 +235,12 @@ public class AndroidAppointment {
     }
 
 
-    public String getRegion() {
-        return Region;
+    public String getTerritory() {
+        return Territory;
     }
 
-    public void setRegion(String Region) {
-        this.Region = Region;
+    public void setTerritory(String Territory) {
+        this.Territory = Territory;
     }
 
     public String getAddress() {

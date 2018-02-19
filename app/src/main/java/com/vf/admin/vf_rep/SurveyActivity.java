@@ -118,7 +118,7 @@ public class SurveyActivity extends AppCompatActivity {
         }*/
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){
@@ -183,7 +183,7 @@ public class SurveyActivity extends AppCompatActivity {
         intent.putExtra("DateRecordChanged", appointment.getDateRecordChanged());
 
         intent.putExtra("Address", appointment.getAddress());
-        intent.putExtra("Region", appointment.getRegion());
+        intent.putExtra("Territory", appointment.getTerritory());
 
         intent.putExtra("BrandName", appointment.getBrandName());
         intent.putExtra("OutletTypeName", appointment.getOutletTypeName());

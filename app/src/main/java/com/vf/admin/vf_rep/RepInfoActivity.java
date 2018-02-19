@@ -53,7 +53,8 @@ Integer mGlobalStoreID;
 
     }
     @Override
-    public void onBackPressed() {     }      @Override  protected void onCreate(Bundle savedInstanceState)
+    public void onBackPressed() {     }
+    @Override  protected void onCreate(Bundle savedInstanceState)
     {
 
         try {
@@ -76,25 +77,25 @@ Integer mGlobalStoreID;
             if(strStoreName != null)
             {
                 TextView StoreName = (TextView) findViewById(R.id.txtStoreName);
-                StoreName.setText(me.getStringExtra("StoreNameURN"));
+                StoreName.setText(me.getStringExtra("StoreName"));
             }
-//            String strURN = me.getStringExtra("URN");
-//            if(strURN != null)
-//            {
-//                TextView URN = (TextView) findViewById(R.id.txtURN);
-//                URN.setText(me.getStringExtra("URN"));
-//            }
+            String strURN = me.getStringExtra("URN");
+            if(strURN != null)
+            {
+                TextView URN = (TextView) findViewById(R.id.txtURN);
+                URN.setText(me.getStringExtra("URN"));
+            }
             String strCurrentPhase = me.getStringExtra("CurrentPhase");
             if(strCurrentPhase != null)
             {
                 TextView CurrentPhase = (TextView) findViewById(R.id.txtCurrentPhase);
                 CurrentPhase.setText(me.getStringExtra("CurrentPhase"));
             }
-            String strRegionName = me.getStringExtra("RegionName");
-            if(strRegionName != null)
+            String strTerritoryName = me.getStringExtra("TerritoryName");
+            if(strTerritoryName != null)
             {
-                TextView RegionName = (TextView) findViewById(R.id.txtRegionName);
-                RegionName.setText(me.getStringExtra("RegionName"));
+                TextView TerritoryName = (TextView) findViewById(R.id.txtTerritoryName);
+                TerritoryName.setText(me.getStringExtra("TerritoryName"));
             }
             String strBrandName = me.getStringExtra("BrandName");
             if(strBrandName != null)
@@ -288,7 +289,7 @@ Integer mGlobalStoreID;
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){
@@ -308,7 +309,15 @@ Integer mGlobalStoreID;
 
     public void GoOnline(View view) {
 
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo?id=%s",mGlobalStoreID))));
+        //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo?id=%s",mGlobalStoreID))));
+        Intent i = new  Intent(RepInfoActivity.this,Webview.class);
+        i.putExtra("",String.format("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo?id=%s", mGlobalStoreID));
+        i.putExtra("UserName", Local.Get(getApplicationContext(),"UserName"));
+        i.putExtra("Password", Local.Get(getApplicationContext(),"Password"));
+
+        finish();
+
+
         finish();
 
     }

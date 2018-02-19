@@ -2,6 +2,7 @@ package com.vf.admin.vf_rep;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
@@ -83,11 +84,19 @@ public class StoreListContractsActivity extends AppCompatActivity
 
             //set and remove prrogress bar
             progressDialog = new ProgressDialog(StoreListContractsActivity.this);
-            progressDialog.setMessage("Loading Lists "); // Setting Message
+            progressDialog.setMessage("Loading Unit Lists "); // Setting Message
             progressDialog.setTitle("Please Wait..."); // Setting Title
             progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
             progressDialog.show(); // Display Progress Dialog
-            progressDialog.setCancelable(false);
+
+            progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+            progressDialog.setCancelable(true);
             new Thread(new Runnable() {
                 public void run() {
                     try {
@@ -140,11 +149,11 @@ public class StoreListContractsActivity extends AppCompatActivity
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){
-            startActivity(new Intent(this,RepHomeActivity.class));
+            startActivity(new Intent(this,MainActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -193,9 +202,7 @@ public class StoreListContractsActivity extends AppCompatActivity
 
     public void GetUnitListsForUserExplicit(String UserName, Boolean IsSurvey, Integer StoreID) {
 
-        String isWebsiteAvailable = Local.Get(getApplicationContext(), "AmIOnline");
 
-        if(isWebsiteAvailable.equals("True")) {
 
             final AlertDialog ad = new AlertDialog.Builder(this).create();
             MySOAPCallActivity cs = new MySOAPCallActivity();
@@ -212,13 +219,7 @@ public class StoreListContractsActivity extends AppCompatActivity
             }
             ad.show();
 
-        }
-        else {
-            //I am OFFLINE
-            //Do Nothing - you'll just use the stores you have :)
 
-
-        }
     }
 
 
@@ -255,7 +256,7 @@ public class StoreListContractsActivity extends AppCompatActivity
                     intent.putExtra("StoreNameURN", store.getStoreNameURN());
 
                     intent.putExtra("CurrentPhase", store.getCurrentPhase());
-                    intent.putExtra("RegionName", store.getRegionName());
+                    intent.putExtra("TerritoryName", store.getTerritoryName());
                     intent.putExtra("BrandName", store.getBrandName());
                     intent.putExtra("TierTypeName", store.getTierTypeName());
                     intent.putExtra("OutletTypeName", store.getOutletTypeName());

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     ViewFlipper viewFlipper;
-
+    String mGlobalRoles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         if (isWebsiteAvailable.equals("True")) {
 
 
-            GetStoresForUser(Local.Get(this.getApplication(), "UserName"), "Rep");
-            GetUnitListsForUserExplicit(Local.Get(this.getApplication(), "UserName"), false, 0);
+
+            //GetUnitListsForUserExplicit(Local.Get(this.getApplication(), "UserName"), false, 0);
 
         }
         else{
@@ -39,9 +41,56 @@ public class MainActivity extends AppCompatActivity {
            // btnUnitaryLists.setVisibility(View.VISIBLE);
         }
 
+        mGlobalRoles = Local.Get(this.getApplication(), "Roles");
+
+        if(mGlobalRoles.contains("Dvh")) //DTM
+        {
+           Button home2 = (Button)this.findViewById(R.id.home3);
+            home2.setVisibility(View.GONE);
+        }
+
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+
+        int id = item.getItemId();
+
+        if (id == R.id.homebutton) {
+
+            Intent intent = new Intent(MainActivity.this, Login.class );
+
+            startActivity(intent); finish();
+
+            // return true;
+        }
+
+
+
+        if (id == R.id.logoutbutton){
+            startActivity(new Intent(this,Login.class));
+        }
+
+        if (id == R.id.backbutton){
+            startActivity(new Intent(this,Login.class));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
     public void GetUnitListsForUserExplicit(String UserName, Boolean IsSurvey, Integer StoreID) {
 
@@ -73,38 +122,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    public void GetStoresForUser(String UserName, String Phase) {
-
-        String isWebsiteAvailable = Local.Get(getApplicationContext(), "AmIOnline");
-
-        if(isWebsiteAvailable.equals("True")) {
-
-            final AlertDialog ad = new AlertDialog.Builder(this).create();
-            MySOAPCallActivity cs = new MySOAPCallActivity();
-            try {
-
-                GetStoresForUserParams params = new GetStoresForUserParams(cs, UserName, Phase);
-
-                new CallSoapGetStoresForUser().execute(params);
-
-
-            } catch (Exception ex) {
-                ad.setTitle("Error!");
-                ad.setMessage(ex.toString());
-            }
-            ad.show();
-
-        }
-        else {
-            //I am OFFLINE
-            //Do Nothing - you'll just use the stores you have :)
-
-
-        }
-    }
-
-    //links child button to parent flipper layout and contains animations
+//links child button to parent flipper layout and contains animations
     public void ClickHome1(View view) {
         viewFlipper.setDisplayedChild(1);
         viewFlipper.setDisplayedChild(viewFlipper.indexOfChild(findViewById(R.id.homescreen1)));
@@ -182,52 +200,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public class CallSoapGetStoresForUser extends AsyncTask<GetStoresForUserParams, Void, String> {
-
-        private Exception exception;
-
-        @Override
-        protected String doInBackground(GetStoresForUserParams... params) {
-            return params[0].foo.GetStoresForUser(params[0].username, params[0].phase);
-        }
-
-        protected void onPostExecute(String result) {
-            // TODO: check this.exception
-            // TODO: do something with the feed
-            try {
-                //process Json Result
-                //Save results in local storage
-                if(result.toLowerCase().contains("error")){
-
-                }
-                else {
-                    Local.Set(getApplicationContext(), "AndroidStores", result);
-                }
-
-            } catch (Exception ex) {
-                String e3 = ex.toString();
-            }
-
-        }
-
-
-
-    }
-    private static class GetStoresForUserParams {
-        MySOAPCallActivity foo;
-        String username;
-        String phase;
-
-
-
-        GetStoresForUserParams(MySOAPCallActivity foo, String username, String phase) {
-            this.foo = foo;
-            this.username = username;
-            this.phase = phase;
-
-
-        }
-    }
 
 
     public class CallSoapGetUnitListsForUserExplicit extends AsyncTask<GetUnitListsForUserExplicitParams, Void, String> {

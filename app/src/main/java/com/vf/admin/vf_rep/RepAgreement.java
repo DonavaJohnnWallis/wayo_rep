@@ -62,7 +62,7 @@ public class RepAgreement extends AppCompatActivity {
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         return super.onOptionsItemSelected(item);

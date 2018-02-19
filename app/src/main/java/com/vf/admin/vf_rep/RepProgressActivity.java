@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.vf.admin.vf_rep.R;
 
@@ -30,11 +31,17 @@ public class RepProgressActivity extends AppCompatActivity
 
 
     @Override
-    public void onBackPressed() {     }      @Override  protected void onCreate(Bundle savedInstanceState)
+    public void onBackPressed() {     }
+    @Override  protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rep_progress_layout);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+        TextView textHeader = (TextView) findViewById(R.id.textHeader);
+
+        textHeader.setText(String.format("Store list for %s", Local.Get(getApplicationContext(), "UserName")));
 
         mystores = getStoresData();
 
@@ -62,7 +69,7 @@ public class RepProgressActivity extends AppCompatActivity
                 intent.putExtra("StoreNameURN", store.getStoreNameURN());
 
                 intent.putExtra("CurrentPhase", store.getCurrentPhase());
-                intent.putExtra("RegionName", store.getRegionName());
+                intent.putExtra("TerritoryName", store.getTerritoryName());
                 intent.putExtra("BrandName", store.getBrandName());
                 intent.putExtra("TierTypeName", store.getTierTypeName());
                 intent.putExtra("OutletTypeName", store.getOutletTypeName());
@@ -127,11 +134,11 @@ public class RepProgressActivity extends AppCompatActivity
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){
-            startActivity(new Intent(this,RepHomeActivity.class));
+            startActivity(new Intent(this,MainActivity.class));
         }
 
         return super.onOptionsItemSelected(item);

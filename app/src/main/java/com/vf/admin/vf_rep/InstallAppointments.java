@@ -84,7 +84,7 @@ public class InstallAppointments extends AppCompatActivity {
                 intent.putExtra("DateRecordChanged", appointment.getDateRecordChanged());
 
                 intent.putExtra("Address", appointment.getAddress());
-                intent.putExtra("Region", appointment.getRegion());
+                intent.putExtra("Territory", appointment.getTerritory());
 
 
                 startActivity(intent); finish();
@@ -131,7 +131,7 @@ public class InstallAppointments extends AppCompatActivity {
         }*/
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){

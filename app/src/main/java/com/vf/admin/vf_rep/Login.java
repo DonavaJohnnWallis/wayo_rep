@@ -1,7 +1,9 @@
 package com.vf.admin.vf_rep;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -45,6 +47,8 @@ import java.util.Date;
 
 public class Login extends AppCompatActivity {
 
+    boolean isNetworkAvailable = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +69,7 @@ public class Login extends AppCompatActivity {
         if(Local.isSet(getApplicationContext(),"UserName")) {
             userName.setText(Local.Get(getApplicationContext(), "UserName"));
         }
-        boolean isNetworkAvailable = isNetworkAvailable();
+        isNetworkAvailable = isNetworkAvailable();
 
     }
 
@@ -168,21 +172,8 @@ public class Login extends AppCompatActivity {
     public void Login(View view) {
 
 
-        Intent intent1 = new Intent(Login.this, MainActivity.class);//Remove after debugging
-        startActivity(intent1); finish();//Remove after debugging
 
-        AmIOnlineAtAll();
-
-        String isWebsiteAvailable = Local.Get(getApplicationContext(), "AmIOnline");
-
-        if(isWebsiteAvailable.equals("True")) {
-
-            OnlineSync();
-
-
-        }
-
-        if (isWebsiteAvailable.equals("True")) {
+        if (isNetworkAvailable) {
             final AlertDialog ad = new AlertDialog.Builder(this).create();
             MySOAPCallActivity cs = new MySOAPCallActivity();
             try {
@@ -203,109 +194,44 @@ public class Login extends AppCompatActivity {
                 ad.setMessage(ex.toString());
             }
             ad.show();
-        } else {
-            //Offline Login
-            EditText userName = (EditText) findViewById(R.id.editUserName);
-            EditText password = (EditText) findViewById(R.id.editPassword);
-            String user = userName.getText().toString();
-            String pwd = password.getText().toString();
+        }
 
-            if (user.equals(Local.Get(getApplicationContext(), "UserName")) && pwd.equals(Local.Get(getApplicationContext(), "Password"))) {
-                Intent intent = new Intent(Login.this, MainActivity.class);
 
-                startActivity(intent); finish();
-                finish();
-                //
 
-            } else {
-                final AlertDialog ad = new AlertDialog.Builder(this).create();
-                ad.setTitle("Login Error");
-                ad.setMessage("Offline saved username and password invalid. Please login online first.");
+    }
 
+
+
+    public void GetStoresForUser(String UserName, String Phase) {
+
+        String isWebsiteAvailable = Local.Get(getApplicationContext(), "AmIOnline");
+
+        if(isWebsiteAvailable.equals("True")) {
+
+            final AlertDialog ad = new AlertDialog.Builder(this).create();
+            MySOAPCallActivity cs = new MySOAPCallActivity();
+            try {
+
+                GetStoresForUserParams params = new GetStoresForUserParams(cs, UserName, Phase);
+
+                new CallSoapGetStoresForUser().execute(params);
+
+
+            } catch (Exception ex) {
+                ad.setTitle("Error!");
+                ad.setMessage(ex.toString());
             }
+            ad.show();
+
         }
+        else {
+            //I am OFFLINE
+            //Do Nothing - you'll just use the stores you have :)
 
-
-
+        }
     }
 
-    public void OnlineSync() {
-        final AlertDialog ad=new AlertDialog.Builder(this).create();
-        //Save Stores
-        MySOAPCallActivity cs = new MySOAPCallActivity();
-        try {
 
-
-            String mystores = Local.Get(getApplicationContext(), "AndroidStores");
-            SaveMyStoresParams params = new SaveMyStoresParams(cs, mystores);
-
-            new CallSoapSaveMyStores().execute(params);
-
-
-        } catch (Exception ex) {
-            ad.setTitle("Error!");
-            ad.setMessage(ex.toString());
-        }
-        ad.show();
-
-
-        //Save Appointments
-        MySOAPCallActivity cs1 = new MySOAPCallActivity();
-        try {
-
-
-            String myappointments = Local.Get(getApplicationContext(), "AndroidTssAppointments");
-            SaveMyAppointmentsParams params = new SaveMyAppointmentsParams(cs1, myappointments);
-
-            new CallSoapSaveMyAppointments().execute(params);
-
-            myappointments = Local.Get(getApplicationContext(), "AndroidInsAppointments");
-            params = new SaveMyAppointmentsParams(cs1, myappointments);
-
-            new CallSoapSaveMyAppointments().execute(params);
-
-            myappointments = Local.Get(getApplicationContext(), "AndroidWhsAppointments");
-            params = new SaveMyAppointmentsParams(cs1, myappointments);
-
-            new CallSoapSaveMyAppointments().execute(params);
-
-
-        } catch (Exception ex) {
-            ad.setTitle("Error!");
-            ad.setMessage(ex.toString());
-        }
-        ad.show();
-
-        //Save Open Requests
-        MySOAPCallActivity cs2 = new MySOAPCallActivity();
-        try {
-
-
-            String myopenrequests = Local.Get(getApplicationContext(), "AndroidTssOpenRequests");
-            SaveMyOpenRequestsParams params = new SaveMyOpenRequestsParams(cs2, myopenrequests);
-
-            new CallSoapSaveMyOpenRequests().execute(params);
-
-
-
-            myopenrequests = Local.Get(getApplicationContext(), "AndroidInsOpenRequests");
-            params = new SaveMyOpenRequestsParams(cs2, myopenrequests);
-
-            new CallSoapSaveMyOpenRequests().execute(params);
-
-            myopenrequests = Local.Get(getApplicationContext(), "AndroidWhsOpenRequests");
-            params = new SaveMyOpenRequestsParams(cs2, myopenrequests);
-
-            new CallSoapSaveMyOpenRequests().execute(params);
-
-
-
-        } catch (Exception ex) {
-            ad.setTitle("Error!");
-            ad.setMessage(ex.toString());
-        }
-        ad.show();
-    }
 
     public class CallSoapLogin extends AsyncTask<LoginParams, Void, String> {
 
@@ -342,9 +268,33 @@ public class Login extends AppCompatActivity {
                     String user = Local.Get(getApplicationContext(), "UserName");
                     Local.Set(getApplicationContext(), "LoggedIn", user);
                     //if successful:
-                    Intent intent = new Intent(Login.this, MainActivity.class);
 
-                    startActivity(intent); finish();
+                    ProgressDialog progressDialog;
+
+                    //set and remove prrogress bar
+                    progressDialog = new ProgressDialog(Login.this);
+                    progressDialog.setMessage("Loading Stores "); // Setting Message
+                    progressDialog.setTitle("Please Wait..."); // Setting Title
+                    progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+                    progressDialog.show(); // Display Progress Dialog
+                    progressDialog.setCancelable(false);
+                    new Thread(new Runnable() {
+                        public void run() {
+                            try {
+                                Thread.sleep(10000);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            // progressDialog.dismiss();
+                        }
+                    }).start();
+
+                    GetStoresForUser(Local.Get(getApplicationContext(), "UserName"), "Rep");
+
+
+                   // Intent intent = new Intent(Login.this, MainActivity.class);
+
+                   // startActivity(intent); finish();
 
 
                 } else {
@@ -557,6 +507,60 @@ public class Login extends AppCompatActivity {
         }
     }
 
+    public class CallSoapGetStoresForUser extends AsyncTask<GetStoresForUserParams, Void, String> {
+
+        private Exception exception;
+
+        @Override
+        protected String doInBackground(GetStoresForUserParams... params) {
+            return params[0].foo.GetStoresForUser(params[0].username, params[0].phase);
+        }
+
+        protected void onPostExecute(String result) {
+            // TODO: check this.exception
+            // TODO: do something with the feed
+            try {
+                //process Json Result
+                //Save results in local storage
+                if(result.toLowerCase().contains("error")){
+
+                }
+                else {
+                    Local.Set(getApplicationContext(), "AndroidStores", result);
+
+                    //move to webservice result
+                    Intent intent = new Intent(Login.this, MainActivity.class);
+
+                    startActivity(intent); finish();
+                    finish();
+                    //
+
+                }
+
+            } catch (Exception ex) {
+                String e3 = ex.toString();
+            }
+
+        }
+
+
+
+    }
+    private static class GetStoresForUserParams {
+        MySOAPCallActivity foo;
+        String username;
+        String phase;
+
+
+
+        GetStoresForUserParams(MySOAPCallActivity foo, String username, String phase) {
+            this.foo = foo;
+            this.username = username;
+            this.phase = phase;
+
+
+        }
+    }
 
 
 }

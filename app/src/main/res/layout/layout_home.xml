@@ -105,7 +105,7 @@
                     style="@style/info_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Contracts and appendix \n Sign of on contracts and  unit appendix" />
+                    android:text="Contracts and appendix \n Sign off on contracts and  unit appendices" />
 
                 <Button
                     android:id="@+id/placeholder2"
@@ -144,7 +144,7 @@
 
                     <Button
 
-                        android:id="@+id/placeholder3"
+                        android:id="@+id/btnGoToContracts"
                         style="@style/button_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -153,17 +153,7 @@
                         android:onClick="GoToContracts"
                         android:text="Select a Store" />
 
-                    <Button
 
-                        android:id="@+id/placeholder3a"
-                        style="@style/button_style"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/button_state"
-                        android:onClick="GoToApendix"
-                        android:visibility="gone"
-                        android:text="Appendix" />
 
 
                 </LinearLayout>
@@ -242,10 +232,12 @@
     </LinearLayout>
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <Button
             android:id="@+id/home3"
@@ -255,21 +247,32 @@
             android:layout_weight="1"
             android:background="@drawable/button_state"
             android:onClick="ClickHome3"
-            android:text="Contracts"
+            android:text="Sign up Contracts and Appendices"
 
             />
+    </LinearLayout>
 
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
         <Button
-            android:id="@+id/home4"
+            android:id="@+id/home5"
             style="@style/button_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_state"
-            android:onClick="ClickHome4"
-            android:text="Placeholder3"
-            android:visibility="gone"/>
+            android:text="Document Library"
+            />
 
     </LinearLayout>
+
+
+
+
 
 </LinearLayout>

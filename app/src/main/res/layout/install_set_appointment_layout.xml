@@ -354,10 +354,10 @@
             android:layout_weight="1">
 
             <TextView
-                android:hint="Region"
+                android:hint="Territory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtRegionLbl"
+                android:id="@+id/txtTerritoryLbl"
                 android:backgroundTint="#efefef"
                 android:textColor="#484848"
                 android:textColorHint="#8f8f8f"
@@ -365,10 +365,10 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:hint="[Region]"
+                android:hint="[Territory]"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtRegion"
+                android:id="@+id/txtTerritory"
                 android:backgroundTint="#efefef"
                 android:textColor="#484848"
                 android:textColorHint="#8f8f8f"

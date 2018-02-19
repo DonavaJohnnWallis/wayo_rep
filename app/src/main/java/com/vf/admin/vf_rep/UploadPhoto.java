@@ -459,7 +459,7 @@ public class UploadPhoto extends AppCompatActivity {
                     intent.putExtra("DateConfirmed", appointment.getDateConfirmed());
                     intent.putExtra("DateRecordChanged", appointment.getDateRecordChanged());
                     intent.putExtra("Address", appointment.getAddress());
-                    intent.putExtra("Region", appointment.getRegion());
+                    intent.putExtra("Territory", appointment.getTerritory());
 
                     intent.putExtra("BrandName", appointment.getBrandName());
                     intent.putExtra("OutletTypeName", appointment.getOutletTypeName());

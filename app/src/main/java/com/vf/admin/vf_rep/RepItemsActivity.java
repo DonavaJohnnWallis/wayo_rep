@@ -74,7 +74,7 @@ public class RepItemsActivity extends AppCompatActivity
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){

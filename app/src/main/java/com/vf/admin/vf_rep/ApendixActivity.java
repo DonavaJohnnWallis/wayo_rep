@@ -6,6 +6,8 @@ import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -44,15 +46,15 @@ public class ApendixActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.layout_apendix);
-
-
+        Intent me = getIntent();
+        globalStoreNameURN = me.getStringExtra("StoreNameURN");
         TextView txtUnitListHeader = (TextView) findViewById(R.id.txtUnitListHeader);
         txtUnitListHeader.setText(String.format("Unit list for store: %s", globalStoreNameURN));
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         boolean mIsSurvey = false;
-        Intent me = getIntent();
-        globalStoreNameURN = me.getStringExtra("StoreNameURN");
+
+
         myunits = getstoreUnitsExplicit(globalStoreNameURN);
         globalStoreID = me.getIntExtra("ID", 0);
 
@@ -69,6 +71,42 @@ public class ApendixActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+
+        int id = item.getItemId();
+
+        if (id == R.id.homebutton) {
+
+            Intent intent = new Intent(ApendixActivity.this, MainActivity.class );
+
+            startActivity(intent); finish();
+
+            // return true;
+        }
+
+
+
+        if (id == R.id.logoutbutton){
+            startActivity(new Intent(this,Login.class));
+        }
+
+        if (id == R.id.backbutton){
+            startActivity(new Intent(this,ContractLast.class));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
 
 

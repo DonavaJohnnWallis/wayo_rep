@@ -101,7 +101,7 @@ public class JsonUtil {
 
                 //dont set online fields
                 if(!mJsonObjectProperty.isNull("URN")){
-                    androidstore2.setRegionName(mJsonObjectProperty.getString("RegionName"));
+                    androidstore2.setTerritoryName(mJsonObjectProperty.getString("TerritoryName"));
                     androidstore2.setURN(mJsonObjectProperty.getString("URN"));
                     androidstore2.setCurrentPhase(mJsonObjectProperty.getString("CurrentPhase"));
                     androidstore2.setTotalUnitCount(parseInt(mJsonObjectProperty.getString("TotalUnitCount")));
@@ -242,7 +242,7 @@ public class JsonUtil {
                 androidappointment.setDateConfirmed(mJsonObjectProperty.getString("DateConfirmed"));
                 androidappointment.setDateRecordChanged(mJsonObjectProperty.getString("DateRecordChanged"));
                 androidappointment.setAddress(mJsonObjectProperty.getString("Address"));
-                androidappointment.setRegion(mJsonObjectProperty.getString("Region"));
+                androidappointment.setTerritory(mJsonObjectProperty.getString("Territory"));
 
 
                 openRequests.add(androidappointment);
@@ -434,7 +434,7 @@ public class JsonUtil {
             jsonObj.put("AddressLine1", store.getAddressLine1());
             jsonObj.put("AddressLine2", store.getAddressLine2());
             jsonObj.put("TownCity", store.getTownCity());
-            jsonObj.put("RegionID", store.getRegionID());
+            jsonObj.put("TerritoryID", store.getTerritoryID());
             jsonObj.put("OpeningTime", store.getOpeningTime());
             jsonObj.put("ClosingTime", store.getClosingTime());
             jsonObj.put("Agreed", store.getAgreed());
@@ -469,7 +469,7 @@ public class JsonUtil {
             jsonObj.put("UserName", androidstore2.getUserName());
             jsonObj.put("URN", androidstore2.getURN());
             jsonObj.put("CurrentPhase", androidstore2.getCurrentPhase());
-            jsonObj.put("RegionName", androidstore2.getRegionName());
+            jsonObj.put("TerritoryName", androidstore2.getTerritoryName());
             jsonObj.put("BrandName", androidstore2.getBrandName());
             jsonObj.put("TierTypeName", androidstore2.getTierTypeName());
             jsonObj.put("OutletTypeName", androidstore2.getOutletTypeName());

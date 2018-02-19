@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 
 /**
  * Created by Donavan on 2017/01/16.
@@ -26,7 +27,7 @@ public class StoreListActivity extends AppCompatActivity {
 
     GridView gridView;
     AdapterStorelist gridViewCustomeAdapter;
-
+    int mglobalStoreID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,6 +36,11 @@ public class StoreListActivity extends AppCompatActivity {
         setContentView(R.layout.layout_storelist);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+
+
+
+        TextView txtHeader = (TextView)findViewById(R.id.txtHeader);
+        txtHeader.setText(String.format("Store list for %s", Local.Get(getApplicationContext(), "UserName")));
 
         gridView=(GridView)findViewById(R.id.gridViewCustom2);
         // Create the Custom Adapter Object
@@ -51,8 +57,8 @@ public class StoreListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo/")));
-                finish();
+               // startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo/")));
+
 
             }
 

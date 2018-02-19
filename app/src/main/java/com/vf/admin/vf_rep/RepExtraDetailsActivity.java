@@ -202,7 +202,7 @@ public class RepExtraDetailsActivity extends AppCompatActivity {
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
 

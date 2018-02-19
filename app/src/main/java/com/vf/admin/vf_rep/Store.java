@@ -18,7 +18,7 @@ public class Store {
     public String AddressLine1;
     public String AddressLine2;
     public String TownCity;
-    public int RegionID;
+    public int TerritoryID;
     public DateTime OpeningTime;
     public DateTime ClosingTime;
     public boolean Agreed;
@@ -104,12 +104,12 @@ public class Store {
     public void setTownCity(String TownCity) {
         this.TownCity = TownCity;
     }
-    public int getRegionID() {
-        return RegionID;
+    public int getTerritoryID() {
+        return TerritoryID;
     }
 
-    public void setRegionID(int RegionID) {
-        this.RegionID = RegionID;
+    public void setTerritoryID(int TerritoryID) {
+        this.TerritoryID = TerritoryID;
     }
     public DateTime getOpeningTime() {
         return OpeningTime;

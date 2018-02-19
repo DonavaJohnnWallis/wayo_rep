@@ -10,44 +10,63 @@ import android.widget.TextView;
 public class StoreDetailsActivity extends AppCompatActivity {
     Integer globalStoreID;
     String globalStoreNameURN;
+    String globalStoreName;
+    String globalURN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_store_details);
-        EditText storename = findViewById(R.id.storename);
-        EditText address = findViewById(R.id.address);
+        TextView storename = findViewById(R.id.storename);
+        TextView address = findViewById(R.id.address);
         //EditText pobox = findViewById(R.id.pobox);
 
         Intent me = getIntent();
-        String strStoreName = me.getStringExtra("StoreNameURN");
+        String fullAddress;
+        String strStoreName = me.getStringExtra("StoreName");
         if(strStoreName != null)
         {
-            storename.setText(me.getStringExtra("StoreNameURN"));
+            storename.setText(me.getStringExtra("StoreName"));
         }
         String strAddress = me.getStringExtra("AddressLine1");
         if(strAddress != null)
         {
-            address.setText(me.getStringExtra("AddressLine1"));
+            fullAddress = String.format("%s",strAddress);
+            String strAddress2 = me.getStringExtra("AddressLine2");
+            if(strAddress2 != null)
+            {
+                fullAddress = String.format("%s %s",strAddress, strAddress2);
+            }
+            String strAddress3 = me.getStringExtra("TownCity");
+            if(strAddress3 != null)
+            {
+                fullAddress = String.format("%s %s %s",strAddress, strAddress2, strAddress3);
+            }
+
+            address.setText(fullAddress);
         }
 
         globalStoreID = me.getIntExtra("ID",0);
         globalStoreNameURN = me.getStringExtra("StoreNameURN");
+        globalURN = me.getStringExtra("URN");
+        globalStoreName = me.getStringExtra("StoreName");
     }
 
     public void OpenContract(View view) {
-        EditText storename = findViewById(R.id.storename);
-        EditText address = findViewById(R.id.address);
+        TextView storename = findViewById(R.id.storename);
+        TextView address = findViewById(R.id.address);
        // EditText pobox = findViewById(R.id.pobox);
 
 
 
         Intent intent = new Intent(StoreDetailsActivity.this, ContractOneActivity.class);
 
-        intent.putExtra("storename",storename.getText().toString());
+        //intent.putExtra("storename",storename.getText().toString());
         intent.putExtra("address",address.getText().toString());
        // intent.putExtra("pobox",pobox.getText().toString());
         intent.putExtra("ID", globalStoreID);
         intent.putExtra("StoreNameURN",      globalStoreNameURN );
+        intent.putExtra("StoreName",      globalStoreName );
+        intent.putExtra("URN",      globalURN );
         startActivity(intent);
         finish();
     }

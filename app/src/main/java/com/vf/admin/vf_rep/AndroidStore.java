@@ -14,7 +14,7 @@ public class AndroidStore {
     public String UserName;
     public String URN;
     public String CurrentPhase;
-    public String RegionName;
+    public String TerritoryName;
     public String BrandName;
     public String TierTypeName;
     public String OutletTypeName;
@@ -105,12 +105,12 @@ public class AndroidStore {
     public void setCurrentPhase(String CurrentPhase) {
         this.CurrentPhase = CurrentPhase;
     }
-    public String getRegionName() {
-        return RegionName;
+    public String getTerritoryName() {
+        return TerritoryName;
     }
 
-    public void setRegionName(String RegionName) {
-        this.RegionName = RegionName;
+    public void setTerritoryName(String TerritoryName) {
+        this.TerritoryName = TerritoryName;
     }
     public String getBrandName() {
         return BrandName;

@@ -288,7 +288,7 @@ public class RepStoreDetailsActivity extends AppCompatActivity {
 
         spinner2 = (Spinner) findViewById(R.id.spinner2);
         List<String> list = new ArrayList<String>();
-        list.add(0, "Choose Region");
+        list.add(0, "Choose Territory");
         list.add(1, "Central Rift");
         list.add(2, "Coast Mainland");
         list.add(3, "Island and South Coast");
@@ -311,7 +311,7 @@ public class RepStoreDetailsActivity extends AppCompatActivity {
         list.add(20, "South Rift");
         list.add(21, "Thika");
         list.add(22, "Western");
-        spinner2.setPrompt("Choose Region");
+        spinner2.setPrompt("Choose Territory");
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                R.layout.spinnerstyle, list);
         dataAdapter.setDropDownViewResource(R.layout.spinnerstyledrop);
@@ -351,7 +351,7 @@ public class RepStoreDetailsActivity extends AppCompatActivity {
         s.TownCity = TownCity.getText().toString();
 
         Spinner regionSpinner = (Spinner)findViewById(R.id.spinner2);
-        s.setRegionName(regionSpinner.getSelectedItem().toString());
+        s.setTerritoryName(regionSpinner.getSelectedItem().toString());
 
         TextView openingTime = (TextView) findViewById(R.id.tvTime);
         s.setOpeningTime( openingTime.getText().toString());
@@ -359,8 +359,8 @@ public class RepStoreDetailsActivity extends AppCompatActivity {
         TextView closingTime = (TextView) findViewById(R.id.tvTime2);
         s.setClosingTime( closingTime.getText().toString());
 
-//        EditText RegionID = (EditText) findViewById(R.id.regionID);
-//        s.RegionID = RegionID.getText().toString();
+//        EditText TerritoryID = (EditText) findViewById(R.id.regionID);
+//        s.TerritoryID = TerritoryID.getText().toString();
 //        EditText OpeningTime = (EditText) findViewById(R.id.openingTime);
 //        s.OpeningTime = OpeningTime.getText().toString();
 //        EditText ClosingTime = (EditText) findViewById(R.id.closingTime);
@@ -419,7 +419,7 @@ public class RepStoreDetailsActivity extends AppCompatActivity {
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){

@@ -190,8 +190,8 @@ public class InstallSetAppointment extends AppCompatActivity  implements GoogleA
         Integer totalUnitCount = me.getIntExtra("TotalUnitCount", -1);
         TotalUnitCount.setText(totalUnitCount.toString());
 
-        TextView txtRegion =  (TextView)findViewById(R.id.txtRegion);
-        txtRegion.setText(me.getStringExtra("Region"));
+        TextView txtTerritory =  (TextView)findViewById(R.id.txtTerritory);
+        txtTerritory.setText(me.getStringExtra("Territory"));
 
         TextView txtBrand =  (TextView)findViewById(R.id.txtBrand);
         txtBrand.setText(me.getStringExtra("BrandName"));
@@ -656,7 +656,7 @@ public class InstallSetAppointment extends AppCompatActivity  implements GoogleA
 
 
         if (id == R.id.logoutbutton){
-            startActivity(new Intent(this,LoginActivity.class));
+            startActivity(new Intent(this,Login.class));
         }
 
         if (id == R.id.backbutton){
