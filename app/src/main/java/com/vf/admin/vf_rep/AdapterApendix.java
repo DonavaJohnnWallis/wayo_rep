@@ -127,6 +127,55 @@ public class AdapterApendix extends ArrayAdapter <AndroidStoreUnitExplicit> {
             case "kenya_cane_walll_counter.jpg" : returnThis = R.drawable.kenya_cane_walll_counter; break;
             case "kenya_cane_Bench.jpg" : returnThis = R.drawable.kenya_cane_bench; break;
             case "kenya_cane_Cocktail_Table_With_Bar_Stool.jpg" : returnThis = R.drawable.kenya_cane_cocktail_table_with_bar_stool; break;
+            //Phase 2 stuff below
+            case "illuminated_modrail_tusker.png" : returnThis = R.drawable.illuminated_modrail_tusker; break;
+            case "brand_pillars_tusker.png" : returnThis = R.drawable.brand_pillars_tusker; break;
+            case "tv_wall_essential_tusker.png" : returnThis = R.drawable.tv_wall_essential_tusker; break;
+            case "tv_wall_premium_tusker.png" : returnThis = R.drawable.tv_wall_premium_tusker; break;
+            case "table_defender_tusker.png" : returnThis = R.drawable.table_defender_tusker; break;
+            case "outlet_sign_tusker.png" : returnThis = R.drawable.outlet_sign_tusker; break;
+            case "conversation_table_tusker.png" : returnThis = R.drawable.conversation_table_tusker; break;
+            case "wall_branding_graphic_panels_tusker.png" : returnThis = R.drawable.wall_branding_graphic_panels_tusker; break;
+            case "communal_bench_tusker.png" : returnThis = R.drawable.communal_bench_tusker; break;
+            case "back_of_bar_tier_1_tusker.png" : returnThis = R.drawable.back_of_bar_tier_1_tusker; break;
+            case "back_of_bar_tier_2_tusker.png" : returnThis = R.drawable.back_of_bar_tier_2_tusker; break;
+            case "back_of_bar_essentials_tusker.png" : returnThis = R.drawable.back_of_bar_essentials_tusker; break;
+            case "modular_illuminated_wall_panel_tier_1_tusker.png" : returnThis = R.drawable.modular_illuminated_wall_panel_tier_1_tusker; break;
+            case "modular_illuminated_wall_panel_tier_2_tusker.png" : returnThis = R.drawable.modular_illuminated_wall_panel_tier_2_tusker; break;
+            case "modular_illuminated_wall_panel_essentials_tusker.png" : returnThis = R.drawable.modular_illuminated_wall_panel_essentials_tusker; break;
+            case "outside_signage_guinness.png" : returnThis = R.drawable.outside_signage_guinness; break;
+            case "solar_light_box_guinness.png" : returnThis = R.drawable.solar_light_box_guinness; break;
+            case "uhi_board_guinness.png" : returnThis = R.drawable.uhi_board_guinness; break;
+            case "front_bar_signage_guinness.png" : returnThis = R.drawable.front_bar_signage_guinness; break;
+            case "table_talker_guinness.png" : returnThis = R.drawable.table_talker_guinness; break;
+            case "tv_cladding_guinness.png" : returnThis = R.drawable.tv_cladding_guinness; break;
+            case "couch_guinness.png" : returnThis = R.drawable.couch_guinness; break;
+            case "bench_1_guinness.png" : returnThis = R.drawable.bench_1_guinness; break;
+            case "bench_2_guinness.png" : returnThis = R.drawable.bench_2_guinness; break;
+            case "modular_back_of_bar_essentials_guinness.png" : returnThis = R.drawable.modular_back_of_bar_essentials_guinness; break;
+            case "modular_back_of_bar_tier_1_guinness.png" : returnThis = R.drawable.modular_back_of_bar_tier_1_guinness; break;
+            case "modular_back_of_bar_tier_2_guinness.png" : returnThis = R.drawable.modular_back_of_bar_tier_2_guinness; break;
+            case "wall_branding_graphic_panels_essentials_guinness.png" : returnThis = R.drawable.wall_branding_graphic_panels_essentials_guinness; break;
+            case "wall_branding_graphic_panels_tier_1_guinness.png" : returnThis = R.drawable.wall_branding_graphic_panels_tier_1_guinness; break;
+            case "wall_branding_graphic_panels_tier_2_guinness.png" : returnThis = R.drawable.wall_branding_graphic_panels_tier_2_guinness; break;
+            case "wall_branding_essentials_guinness.png" : returnThis = R.drawable.wall_branding_essentials_guinness; break;
+            case "wall_branding_tier_1_guinness.png" : returnThis = R.drawable.wall_branding_tier_1_guinness; break;
+            case "wall_branding_tier_2_guinness.png" : returnThis = R.drawable.wall_branding_tier_2_guinness; break;
+            case "uhi_board_kenya_cane.png" : returnThis = R.drawable.uhi_board_kenya_cane; break;
+            case "wall_mirrors_kenya_cane.png" : returnThis = R.drawable.wall_mirrors_kenya_cane; break;
+            case "light_box_kenya_cane.png" : returnThis = R.drawable.light_box_kenya_cane; break;
+            case "wall_branding_graphic_panels_kenya_cane.png" : returnThis = R.drawable.wall_branding_graphic_panels_kenya_cane; break;
+            case "table_defender_kenya_cane.png" : returnThis = R.drawable.table_defender_kenya_cane; break;
+            case "tv_cladding_kenya_cane.png" : returnThis = R.drawable.tv_cladding_kenya_cane; break;
+            case "modular_back_of_bar_unit_header_lightbox_kenya_cane.png" : returnThis = R.drawable.modular_back_of_bar_unit_header_lightbox_kenya_cane; break;
+            case "cafe_table_with_seating_kenya_cane.png" : returnThis = R.drawable.cafe_table_with_seating_kenya_cane; break;
+            case "perfect_serve_kenya_cane.png" : returnThis = R.drawable.perfect_serve_kenya_cane; break;
+            case "outlet_name_kenya_cane.png" : returnThis = R.drawable.outlet_name_kenya_cane; break;
+            case "wall_counter_kenya_cane.png" : returnThis = R.drawable.wall_counter_kenya_cane; break;
+            case "bench_kenya_cane.png" : returnThis = R.drawable.bench_kenya_cane; break;
+            case "cocktail_table_with_bar_stool_kenya_cane.png" : returnThis = R.drawable.cocktail_table_with_bar_stool_kenya_cane; break;
+
+
             default: returnThis = R.drawable.kenya_cane_cocktail_table_with_bar_stool; break;//DANIEL DEFAULT IF NOTHING FOUND!!!
         }
 

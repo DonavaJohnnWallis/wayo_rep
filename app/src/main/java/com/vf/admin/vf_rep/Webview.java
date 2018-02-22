@@ -15,6 +15,8 @@ import android.webkit.WebViewClient;
 public class Webview extends AppCompatActivity {
 
     private WebView mWebView;
+    public String username;
+    public String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mWebView = (WebView) findViewById(R.id.webview1);
@@ -26,6 +28,9 @@ public class Webview extends AppCompatActivity {
 
         Intent me = getIntent();
         String urlstring = me.getStringExtra("StoreInfoURL");
+        username = me.getStringExtra("UserName");
+        password = me.getStringExtra("Password");
+
         mWebView.loadUrl(urlstring);
 
     }
@@ -34,7 +39,7 @@ public class Webview extends AppCompatActivity {
         public void onReceivedHttpAuthRequest(WebView view,
                                               HttpAuthHandler handler, String host, String realm) {
 
-            handler.proceed("me@test.com", "mypassword");
+            handler.proceed(username, password);
 
         }
     }

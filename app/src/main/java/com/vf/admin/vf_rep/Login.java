@@ -277,7 +277,15 @@ public class Login extends AppCompatActivity {
                     progressDialog.setTitle("Please Wait..."); // Setting Title
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
                     progressDialog.show(); // Display Progress Dialog
-                    progressDialog.setCancelable(false);
+                    progressDialog.setCancelable(true);
+
+                    progressDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+
                     new Thread(new Runnable() {
                         public void run() {
                             try {

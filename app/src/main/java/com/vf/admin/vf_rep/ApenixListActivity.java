@@ -90,7 +90,7 @@ public class ApenixListActivity extends AppCompatActivity {
                     }
                 });
 
-                progressDialog.setCancelable(false);
+                progressDialog.setCancelable(true);
                 new Thread(new Runnable() {
                     public void run() {
                         try {
