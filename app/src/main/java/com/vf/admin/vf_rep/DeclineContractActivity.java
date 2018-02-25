@@ -27,14 +27,7 @@ public class DeclineContractActivity extends AppCompatActivity {
         // Declined as all agreement requirements have not been accepted. Please update Visual Fusion with replacement outlet information on kenya@visualfusionglobal.com.
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
     }
 
     public void declineContract(View view) {

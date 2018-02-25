@@ -23,7 +23,7 @@ public class Webview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
 
-
+        
         mWebView = (WebView) findViewById(R.id.webview1);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);

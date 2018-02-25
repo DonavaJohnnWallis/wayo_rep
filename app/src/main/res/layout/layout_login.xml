@@ -54,7 +54,8 @@
                 android:minHeight="60dp"
                 android:minWidth="350dp"
                 android:textColor="#484848"
-                android:textColorHint="#8f8f8f" />
+                android:textColorHint="#8f8f8f"
+                android:text="Catherine.nziuko@eabl.com"/>
 
 
             <EditText
@@ -70,6 +71,7 @@
                 android:maxWidth="100dp"
                 android:minHeight="60dp"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:text="Password1!"
                 />
 
 
