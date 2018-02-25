@@ -166,6 +166,7 @@
 
     <string name="agreement2">This Agreement has been discussed and the above terms and conditions agreed by both parties on this </string>
     <string name="title_activity_webview">Webview</string>
+    <string name="title_activity_decline_contract">DeclineContractActivity</string>
 
 
 </resources>
