@@ -19,18 +19,23 @@ public class Webview extends AppCompatActivity {
     public String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_webview);
+
+
         mWebView = (WebView) findViewById(R.id.webview1);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_webview);
-        mWebView.setWebViewClient(new MyWebViewClient());
+
 
         Intent me = getIntent();
         String urlstring = me.getStringExtra("StoreInfoURL");
         username = me.getStringExtra("UserName");
         password = me.getStringExtra("Password");
 
+
+        mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.loadUrl(urlstring);
 
     }

@@ -47,7 +47,7 @@ public class ContractTwoActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.mainmenu, menu);
+        getMenuInflater().inflate(R.menu.menu_contract_one, menu);
         return true;
     }
 
@@ -77,7 +77,13 @@ public class ContractTwoActivity extends AppCompatActivity {
         if (id == R.id.backbutton){
             startActivity(new Intent(this,ContractOneActivity.class));
         }
+        if (id == R.id.declineContract){
 
+            Intent intent = new Intent(ContractTwoActivity.this, DeclineContractActivity.class );
+            intent.putExtra("StoreID", globalStoreID);
+
+            startActivity(intent); finish();
+        }
         return super.onOptionsItemSelected(item);
     }
 

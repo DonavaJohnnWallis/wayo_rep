@@ -324,7 +324,8 @@ public class SignatureActivity extends AppCompatActivity {
             try {
                 //process Json Result
                 //Save results in local storage
-                if(result.toLowerCase().contains("error")){
+                if(result.toLowerCase().contains("error") || result.toLowerCase().contains("fault")){
+                    Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
 
                 }
                 else {
@@ -380,6 +381,7 @@ public class SignatureActivity extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), ApendixActivity.class);
 
             i.putExtra("StoreNameURN", globalStoreNameURN);
+            i.putExtra("ID", mGlobalStoreID);
 
             startActivity(i);
         }

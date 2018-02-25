@@ -311,14 +311,14 @@ Integer mGlobalStoreID;
 
         //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(String.format("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo?id=%s",mGlobalStoreID))));
         Intent i = new  Intent(RepInfoActivity.this,Webview.class);
-        i.putExtra("StoreInfoURL",String.format("http://testingwayo.winninginontrade.miid.co.za/Stores/RepStoreInfo?id=%s", mGlobalStoreID));
+        i.putExtra("StoreInfoURL",String.format("http://testingwayo2.winninginontrade.miid.co.za/Stores/RepStoreInfo?id=%s", mGlobalStoreID));
         i.putExtra("UserName", Local.Get(getApplicationContext(),"UserName"));
         i.putExtra("Password", Local.Get(getApplicationContext(),"Password"));
-
+startActivity(i);
         finish();
 
 
-        finish();
+
 
     }
 
