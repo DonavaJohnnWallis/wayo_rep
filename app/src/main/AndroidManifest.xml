@@ -49,8 +49,7 @@
             android:label="Home" />
         <activity
             android:name=".ContractOneActivity"
-            android:label="Contract Page 1"
-             />
+            android:label="Contract Page 1" />
         <activity android:name=".StoreDetailsActivity" />
         <activity android:name=".ApendixActivity" />
         <activity android:name=".ApenixListActivity" />
@@ -63,8 +62,7 @@
         <activity android:name=".RepHomeActivity" />
         <activity
             android:name=".Signature"
-            android:label="@string/title_activity_signature"
-           />
+            android:label="@string/title_activity_signature" />
         <activity android:name=".ContractTwoActivity" />
         <activity android:name=".ContractThreeActivity" />
         <activity android:name=".ContractFourActivity" />
@@ -73,6 +71,10 @@
         <activity
             android:name=".Webview"
             android:label="@string/title_activity_webview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DeclineContractActivity"
+            android:label="@string/title_activity_decline_contract"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
